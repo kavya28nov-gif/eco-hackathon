@@ -1,0 +1,23 @@
+period,period_type,metric,value,unit,scope_and_definition,source_id,data_quality_note
+FY2025-26,Annual,Turnover,63763.0,INR crore,Continuing operations; FY26 official financial performance page,S1,Reported annual figure
+FY2025-26,Annual,Underlying Sales Growth,5.0,%,HUL-defined USG; excludes changes due to acquisitions/disposals,S1,Reported annual figure
+FY2025-26,Annual,Underlying Volume Growth,4.0,%,HUL-defined UVG; includes impact of mix of turnover realisation,S1,Reported annual figure
+FY2025-26,Annual,EBITDA,15054.0,INR crore,Continuing operations; annual figure,S1,Reported annual figure
+FY2025-26,Annual,EBITDA Margin,23.6,%,Continuing operations; annual figure,S1,Reported annual figure
+FY2025-26,Annual,Profit After Tax before exceptional items,10324.0,INR crore,Continuing operations; annual figure,S1,Reported annual figure
+FY2025-26,Annual,Reported Profit After Tax,10652.0,INR crore,Reported PAT; source notes continuing operations and discontinued Ice Cream business treatment,S1,Reported annual figure; inspect annual report notes
+FY2025-26,Annual,Cash from Operations,10496.0,INR crore,"Standalone business, explicitly footnoted on HUL performance page",S1,Do not compare with consolidated PAT without matching scope
+FY2024-25,Annual,Turnover (historical series restated on FY26 page),60573.0,INR crore,"Historical series on FY26 page; continuing operations as reported, footnotes mention discontinued Ice Cream business",S1,"Use this value for same-page comparison; other FY25 page shows 60,680 on a different basis"
+FY2024-25,Annual,Turnover (FY25 page headline),60680.0,INR crore,Headline value on FY25 financial performance page,S2,Do not mix with FY26 historical-series turnover until basis is reconciled
+Q1 FY2025-26 (June 2025),Quarter,Turnover,16323.0,INR crore,Consolidated quarter; June quarter 2025 earnings-call transcript,S6,Reported turnover
+Q2 FY2025-26 (September 2025),Quarter,Turnover,16061.0,INR crore,Quarter turnover cited in official earnings-call transcript,S5,Reported turnover
+Q3 FY2025-26 (December 2025),Quarter,Turnover,16235.0,INR crore,Consolidated quarter; Dec 2025 results presentation,S4,Reported turnover
+Q3 FY2025-26 (December 2025),Quarter,EBITDA,3788.0,INR crore,Consolidated quarter,S4,Reported EBITDA
+Q3 FY2025-26 (December 2025),Quarter,EBITDA Margin,23.3,%,Consolidated quarter,S4,Reported margin
+Q3 FY2025-26 (December 2025),Quarter,Profit After Tax before exceptional items,2562.0,INR crore,Consolidated quarter,S4,Preferred for underlying trend analysis; reported PAT distorted by one-off
+Q3 FY2025-26 (December 2025),Quarter,Reported Profit After Tax,6603.0,INR crore,Includes one-off positive impact arising from Ice Cream demerger,S4,Flag as exceptional; not comparable to underlying PAT
+Q4 FY2025-26 (March 2026),Quarter,Turnover,16207.0,INR crore,Consolidated quarter; official results release,S3,Reported turnover
+Q4 FY2025-26 (March 2026),Quarter,EBITDA,3841.0,INR crore,Consolidated quarter,S3,Reported EBITDA
+Q4 FY2025-26 (March 2026),Quarter,EBITDA Margin,23.7,%,Consolidated quarter,S3,Reported margin
+Q4 FY2025-26 (March 2026),Quarter,Profit After Tax before exceptional items,2711.0,INR crore,Consolidated quarter,S3,Preferred for underlying trend analysis
+Q4 FY2025-26 (March 2026),Quarter,Reported Profit After Tax,3002.0,INR crore,Includes proceeds from divestment of stake in Nutritionalab Pvt. Ltd.,S3,Flag one-off/exceptional impact
