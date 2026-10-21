@@ -1589,71 +1589,7 @@
    "source_url": "https://www.screener.in/company/JUBLFOOD/consolidated/"
   }
  ],
- "text_excerpts": [
-  {
-   "company": "JUBLFOOD",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Quarterly Results - Jubilant FoodWorks",
-   "excerpt": "Quarterly Results FY 2026-27 FY 2025-26 FY 2024-25 FY 2023-24 FY 2022-23 FY 2021-22 Archive",
-   "source_url": "https://www.jubilantfoodworks.com/investors-financial-information"
-  },
-  {
-   "company": "JUBLFOOD",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Earnings Presentation - Jubilant FoodWorks",
-   "excerpt": "Earnings Presentation Earnings Presentation Earnings Presentation Earning Presentation",
-   "source_url": "https://www.jubilantfoodworks.com/financial-information/earnings-presentation"
-  },
-  {
-   "company": "JUBLFOOD",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Jubilant Foodworks Ltd. Investor Presentation - Trendlyne",
-   "excerpt": "May 20, 2026 · Jubilant Foodworks Ltd. Investor Presentation: Get insights into company performance, financials, capex plans and more",
-   "source_url": "https://trendlyne.com/investor-presentations/701/JUBLFOOD/jubilant-foodworks-ltd/"
-  },
-  {
-   "company": "JUBLFOOD",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Earnings Call / Webcast Transcript - Jubilant FoodWorks",
-   "excerpt": "Earnings Call / Webcast Transcript Earnings Call Transcript ... Earnings Call / Webcast Transcript Earnings Call Transcript Earnings Call Transcript",
-   "source_url": "https://www.jubilantfoodworks.com/financial-information/earnings-call-transcript"
-  },
-  {
-   "company": "JUBLFOOD",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Q4FY25 and FY’25 Earnings Conference Call Transcript",
-   "excerpt": "We will also share the replay and transcript of the call on the company's website under the Investor Relations section. I would now like to invite Mr. Hari S. Bhartia to share his view with you. Over to you, sir. Thank you, Lakshya. Good evening, everyone, and welcome to our earnings call.",
-   "source_url": "https://www.jubilantfoodworks.com/Uploads/Files/1190foodfile-Q4andFY25Transcription.pdf"
-  },
-  {
-   "company": "JUBLFOOD",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Jubilant FoodWorks Limited (JUBLFOOD) Earnings Call Transcripts",
-   "excerpt": "Every Jubilant FoodWorks Limited (JUBLFOOD) earnings call transcript on record: 29 calls, newest first, free to read in full.",
-   "source_url": "https://earningscalls.dev/company/jublfood"
-  },
-  {
-   "company": "JUBLFOOD",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Annual Reports - Jubilant FoodWorks",
-   "excerpt": "Integrated Annual Report For FY 2025-26 Integrated Annual Report For FY 2024-25 Integrated Annual Report for FY 2023-24 Integrated Annual Report for FY 2022-23",
-   "source_url": "https://www.jubilantfoodworks.com/company-reports/annual-reports"
-  },
-  {
-   "company": "JUBLFOOD",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Jubilant FoodWorks Limited Integrated Report 2025-26 BE THE BOLD",
-   "excerpt": "This Integrated Report for FY 2025-26 is to be construed as Annual Report from the perspective of the Companies Act, 2013 read with rules thereunder and SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015.",
-   "source_url": "https://www.jubilantfoodworks.com/Uploads/Files/273akmfile-integrated-annual-report-for-fy2025-26.pdf"
-  },
-  {
-   "company": "JUBLFOOD",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Jubilant FoodWorks - Annual Reports - CompaniesMarketCap.com",
-   "excerpt": "Annual Reports Annual Reports Quarterly Reports Financial Statements Sustainability Reports",
-   "source_url": "https://companiesmarketcap.com/jubilant-foodworks/annual-reports/"
-  }
- ],
+ "text_excerpts": [],
  "industry_info": {
   "broad_sector": "Consumer Discretionary",
   "sector": "Consumer Services",
@@ -1661,6 +1597,13 @@
   "industry": "Restaurants"
  },
  "is_track_c": true,
+ "peer_tickers": [
+  "TRAVELFOOD",
+  "DEVYANI",
+  "WESTLIFE",
+  "RBA",
+  "SAPPHIRE"
+ ],
  "data_quality_flags": [],
- "fetched_at": "2026-10-20 23:30"
+ "fetched_at": "2026-10-21 00:00"
 }

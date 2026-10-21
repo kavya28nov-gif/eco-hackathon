@@ -1589,71 +1589,7 @@
    "source_url": "https://www.screener.in/company/TATACONSUM/consolidated/"
   }
  ],
- "text_excerpts": [
-  {
-   "company": "TATACONSUM",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Financial Information - Results & Presentations - Investor ...",
-   "excerpt": "Results & Presentations Investor Presentations Press Releases Consolidated Results Standalone Results Call Transcripts Earnings Call Recordings INVESTOR PRESENTATION – Q1 2026-2027 INVESTOR PRESENTATION – Q4 2025-2026",
-   "source_url": "https://www.tataconsumer.com/investors/investor-relations/results-and-presentation/analyst-presentation"
-  },
-  {
-   "company": "TATACONSUM",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Results & Presentations - Tata Consumer Products",
-   "excerpt": "Home Investors Financial Information - Results & Presentations - Consolidated Results",
-   "source_url": "https://www.tataconsumer.com/investors/investor-relations/results-and-presentation/consolidated-results"
-  },
-  {
-   "company": "TATACONSUM",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Tata Consumer Products Ltd — Investor''s presentation for Q1 ...",
-   "excerpt": "Jul 24, 2026 · Investor''s presentation for Q1 FY 2027 is enclosed.",
-   "source_url": "https://indianstockalerts.com/news/tataconsum-investor-s-presentation-for-q1-fy-2027-is-enclosed-6757"
-  },
-  {
-   "company": "TATACONSUM",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Financial Information - Results & Presentations - Call ...",
-   "excerpt": "Results & Presentations Investor Presentations Press Releases Consolidated Results Standalone Results Call Transcripts Earnings Call Recordings",
-   "source_url": "https://www.tataconsumer.com/investors/financial-information/call-transcripts"
-  },
-  {
-   "company": "TATACONSUM",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Earnings Call Recordings - Tata Consumer Products",
-   "excerpt": "Jan 17, 2023 · Press Releases Consolidated Results Standalone Results Call Transcripts Earnings Call Recordings RECORDING OF INVESTOR CALL ON Q1 FY 2026-27 RESULTS RECORDING OF INVESTOR CALL ON Q4 FY 2025-26 RESULTS RECORDING OF INVESTOR CALL ON Q3 FY 2025-26 RESULTS RECORDING OF INVESTOR CALL ON Q2 FY 2025-26 RESULTS RECORDING OF INVESTOR CALL ON Q1 FY 2025 ...",
-   "source_url": "https://www.tataconsumer.com/investors/financial-information/earnings-call-recordings"
-  },
-  {
-   "company": "TATACONSUM",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Tata Consumer Products Earnings Call Transcripts",
-   "excerpt": "May 8, 2026 · Transcripts for earnings calls and other events for Tata Consumer Products Limited, with audio and supporting slides and documents when applicable.",
-   "source_url": "https://stockanalysis.com/quote/nse/TATACONSUM/transcripts/"
-  },
-  {
-   "company": "TATACONSUM",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Financial Information - Annual Reports | Tata Consumer Products",
-   "excerpt": "Annual Reports Click here to view the Interactive Annual Report 2025-26 Click here to view the Interactive Annual Report 2024-25 Click here to view the Interactive Annual Report 2023-24 Click here to view the Interactive Annual Report 2022-23 Click here to view the Interactive Annual Report 2021-22 Click here to view the Interactive Annual ...",
-   "source_url": "https://www.tataconsumer.com/investors/investor-information/annual-reports"
-  },
-  {
-   "company": "TATACONSUM",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Tata Consumer Products IR 2025-26",
-   "excerpt": "Explore detailed insights, statutory filings, and financial statements through our dynamic PDF viewing experience. Investor Relations Annual Report microsite.",
-   "source_url": "https://www.tataconsumer.com/iar-2025-26/reports/"
-  },
-  {
-   "company": "TATACONSUM",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Tata Consumer Products: 251 Filings, 1998-26 - Annual Reports ...",
-   "excerpt": "All 251 Tata Consumer Products (TATACONSUM) filings from 1998 to 2026 in one place: annual reports, earnings call transcripts, investor presentations, quarterly results and announcements, organised by fiscal year.",
-   "source_url": "https://www.stockssena.com/research/filings/TATACONSUM"
-  }
- ],
+ "text_excerpts": [],
  "industry_info": {
   "broad_sector": "Fast Moving Consumer Goods",
   "sector": "Fast Moving Consumer Goods",
@@ -1661,6 +1597,12 @@
   "industry": "Tea & Coffee"
  },
  "is_track_c": true,
+ "peer_tickers": [
+  "HINDUNILVR",
+  "NESTLEIND",
+  "BRITANNIA",
+  "MARICO"
+ ],
  "data_quality_flags": [],
- "fetched_at": "2026-10-20 23:29"
+ "fetched_at": "2026-10-21 00:00"
 }

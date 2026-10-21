@@ -67,7 +67,7 @@ def make_llm():
 if run:
     status = st.status("Running research pipeline...", expanded=True)
     try:
-        status.write("1/3 Collecting public data...")
+        status.write("1/4 Collecting public data...")
         data = load_data(company, use_sample)
         ticker = data.get("ticker", "")
         status.write(f"Got {data.get('record_count', 0)} financial records and "
@@ -80,11 +80,23 @@ if run:
         if official:
             status.write(f"Loaded {len(official)} official source-linked figures for cross-checking.")
 
-        status.write("2/3 Calculating metrics...")
+        # peers: from the cache when offline, else fetched live (numbers only, in parallel)
+        peer_list = data.get("peer_tickers") or research.peers_for(ticker)
+        status.write(f"2/4 Fetching peers for the peer-control check: {', '.join(peer_list) or 'none found'}")
+        if use_sample:
+            peers = {p: research.load_cache(p) for p in peer_list}
+            peers = {p: d for p, d in peers.items() if d}
+            for p in peer_list:
+                status.write(f"Peer {p}: {'from cache' if p in peers else 'not cached, skipped'}")
+        else:
+            peers = research.fetch_peers(peer_list, progress=status.write)
+
+        status.write("3/4 Calculating metrics...")
         result = analysis.analyze_financials(data)
 
-        status.write("3/3 Forming hypothesis and red-teaming it...")
-        insight = validation.run_validation(data, official_rows=official, source_register=register, llm=make_llm())
+        status.write("4/4 Forming hypothesis and red-teaming it...")
+        insight = validation.run_validation(data, official_rows=official, source_register=register,
+                                            peer_data=peers or None, llm=make_llm())
 
         st.session_state["run"] = {"data": data, "analysis": result, "insight": insight}
         status.update(label="Done", state="complete", expanded=False)

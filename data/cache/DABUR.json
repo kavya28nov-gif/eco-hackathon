@@ -1601,14 +1601,14 @@
    "company": "DABUR",
    "topic": "investor presentation underlying volume growth price quarterly results",
    "doc_title": "Investor Overview | Results | Dabur",
-   "excerpt": "Get access to Dabur’s quarterly reports, Select the term and quarter to download all the reports and performance documents.",
+   "excerpt": "Get access to Dabur’s quarterly reports, Select the term and quarter to download all the reports and performance documents",
    "source_url": "https://www.dabur.com/investor/financial-information/results"
   },
   {
    "company": "DABUR",
    "topic": "investor presentation underlying volume growth price quarterly results",
    "doc_title": "Dabur - Investor Presentations - Trendlyne",
-   "excerpt": "Jul 29, 2026 · Dabur Investor Presentation: Get insights into company performance, financials, capex plans and more",
+   "excerpt": "Jul 29, 2026 · Dabur investor presentations, annual reports, credit ratings, and earnings calls with AI summary, video, and audio access",
    "source_url": "https://trendlyne.com/fundamentals/documents-investor-presentation/303/DABUR/dabur-india-ltd/"
   },
   {
@@ -1622,7 +1622,7 @@
    "company": "DABUR",
    "topic": "earnings call transcript quick commerce modern trade rural demand",
    "doc_title": "Dabur India Ltd. Conference Calls and Earnings Call Transcripts",
-   "excerpt": "Jul 29, 2026 · Dabur India Results Earnings Call for Q1FY27 Conference Call with Dabur India Management and Analysts on Q1FY27 Performance and Outlook. Listen to the full earnings transcript.",
+   "excerpt": "Jul 29, 2026 · Dabur India Ltd. Conference Calls and Earnings Call Transcripts: Get insights into company performance, financials, capex plans, and more.",
    "source_url": "https://trendlyne.com/earnings-transcripts/303/DABUR/dabur-india-ltd/"
   },
   {
@@ -1661,6 +1661,13 @@
   "industry": "Personal Care"
  },
  "is_track_c": true,
+ "peer_tickers": [
+  "MARICO",
+  "GODREJCP",
+  "COLPAL",
+  "EMAMILTD",
+  "HINDUNILVR"
+ ],
  "data_quality_flags": [],
- "fetched_at": "2026-10-20 23:29"
+ "fetched_at": "2026-10-21 00:00"
 }

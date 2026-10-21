@@ -1589,7 +1589,71 @@
    "source_url": "https://www.screener.in/company/ASIANPAINT/consolidated/"
   }
  ],
- "text_excerpts": [],
+ "text_excerpts": [
+  {
+   "company": "ASIANPAINT",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Investors Information - Asian Paints Financial Overview",
+   "excerpt": "Investors - Asian Paints' Investors Section. Stay Informed about Our Financial Performance & Business Insights.",
+   "source_url": "https://www.asianpaints.com/more/investors.html"
+  },
+  {
+   "company": "ASIANPAINT",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Welcome Investors - Discover Asian Paints' Financial ...",
+   "excerpt": "Investors Landing Page - Asian Paints' Investors Landing Page. Access Financial Reports & More. Invest with Confidence!",
+   "source_url": "https://www.asianpaints.com/more/investors/investors-landing-page.html"
+  },
+  {
+   "company": "ASIANPAINT",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "ASIAN PAINTS LTD. — Find enclosed the investor presentation ...",
+   "excerpt": "Jul 29, 2026 · ASIAN PAINTS LTD. (ASIANPAINT) filing on 29 Jul 2026: Investor Presentation - Q1FY27 - Standalone net sales grew 16.7% with gross margin at 43.8%, up 66 bps y-y - Consolidated net sales up 17.9%, gross margin improved 89 bps y-y - PBDIT margin rose to 22",
+   "source_url": "https://indianstockalerts.com/news/asianpaint-find-enclosed-the-investor-presentation-on-the-bus-8284"
+  },
+  {
+   "company": "ASIANPAINT",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Asian Paints (NSE:ASIANPAINT) Earnings Call Transcripts",
+   "excerpt": "May 29, 2026 · Transcripts for earnings calls and other events for Asian Paints Limited, with audio and supporting slides and documents when applicable.",
+   "source_url": "https://stockanalysis.com/quote/nse/ASIANPAINT/transcripts/"
+  },
+  {
+   "company": "ASIANPAINT",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Asian Paints Limited (ASIANPAINT.NS) Stock Earnings Call ...",
+   "excerpt": "Yahoo Finance provides transcripts for the latest Asian Paints Limited (ASIANPAINT.NS) earnings call and access historical call transcripts to help inform your investment decisions.",
+   "source_url": "https://finance.yahoo.com/quote/ASIANPAINT.NS/earnings-calls/?fr=sycsrp_catchall"
+  },
+  {
+   "company": "ASIANPAINT",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Asian Paints Limited (ASIANPAINT) May 29, 2026 Earnings Call ...",
+   "excerpt": "May 29, 2026 · Asian Paints Limited (ASIANPAINT) May 29, 2026 earnings call transcript and summary · Materials · NSEI. Full transcript, speaker segments and key metrics — free on earningscalls.dev.",
+   "source_url": "https://earningscalls.dev/transcripts/asian-paints-limited_asianpaint_earnings_call_transcript_2026-05-29"
+  },
+  {
+   "company": "ASIANPAINT",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Annual Report 25 26 - Asian Paints",
+   "excerpt": "Asian Paints Integrated Annual Report 2025-26. Explore our financial performance, ESG commitments, product innovations and value creation story — Responsible. Resilient. Radiant.",
+   "source_url": "https://www.asianpaints.com/content/annualreport/annual-report-25-26.html"
+  },
+  {
+   "company": "ASIANPAINT",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Annual Reports - Asian Paints",
+   "excerpt": "Explore Asian Paints' annual reports to gain insights into its financial performance, governance, and impact in the paint and décor industry.",
+   "source_url": "https://www.asianpaints.com/more/investors/financialresults-new/annualreports.html"
+  },
+  {
+   "company": "ASIANPAINT",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Asian Paints - Annual Reports - CompaniesMarketCap.com",
+   "excerpt": "Asian Paints is a multinational Indian company that is engaged in the manufacture, sale and distribution of paints, coatings, products related to home furnishings and bathroom fittings.",
+   "source_url": "https://companiesmarketcap.com/asian-paints/annual-reports/"
+  }
+ ],
  "industry_info": {
   "broad_sector": "Consumer Discretionary",
   "sector": "Consumer Durables",
@@ -1597,6 +1661,12 @@
   "industry": "Paints"
  },
  "is_track_c": true,
+ "peer_tickers": [
+  "BERGEPAINT",
+  "KANSAINER",
+  "INDIGOPNTS",
+  "JSWDULUX"
+ ],
  "data_quality_flags": [],
- "fetched_at": "2026-10-20 23:29"
+ "fetched_at": "2026-10-20 23:59"
 }

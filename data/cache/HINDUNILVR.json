@@ -1594,7 +1594,7 @@
    "company": "HINDUNILVR",
    "topic": "investor presentation underlying volume growth price quarterly results",
    "doc_title": "Quarterly Results and Webcasts | Unilever - hul.co.in",
-   "excerpt": "Feb 12, 2026 · Our quarterly results announcements and associated documents are arranged in reverse chronological order for your convenience",
+   "excerpt": "Our quarterly results announcements and associated documents are arranged in reverse chronological order for your convenience",
    "source_url": "https://www.hul.co.in/investors/results-and-presentations/quarterly-results-and-webcasts/"
   },
   {
@@ -1608,50 +1608,8 @@
    "company": "HINDUNILVR",
    "topic": "investor presentation underlying volume growth price quarterly results",
    "doc_title": "Hindustan Unilever - Investor Presentations - Trendlyne",
-   "excerpt": "4 days ago · Hindustan Unilever Investor Presentation: Get insights into company performance, financials, capex plans and more",
+   "excerpt": "Hindustan Unilever Investor Presentation: Get insights into company performance, financials, capex plans and more",
    "source_url": "https://trendlyne.com/fundamentals/documents-investor-presentation/560/HINDUNILVR/hindustan-unilever-ltd/"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "PDF MQ'25 and FY'25 Earnings Call - hul.co.in",
-   "excerpt": "Rural demand continued to improve gradually while urban demand moderated over the year. While syndicated data is available only for general and modern trade, we also incorporate e-commerce data from our partners for internal tracking.",
-   "source_url": "https://www.hul.co.in/files/mq25-earnings-call-transcript.pdf"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "HINDUSTAN UNILEVER LTD. (HINDUNILVR.BO) Q4 25/26 earnings call transcript",
-   "excerpt": "The creation of a dedicated quick commerce organization enables us to step up our effectiveness while maintaining a strong focus on general trade and modern trade.",
-   "source_url": "https://finance.yahoo.com/quote/HINDUNILVR.BO/earnings/HINDUNILVR.BO-Q4-2026-earnings_call-544024.html"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Hindustan Unilever (NSE:HINDUNILVR) Earnings Call Transcripts",
-   "excerpt": "Transcripts for earnings calls and other events for Hindustan Unilever Limited, with audio and supporting slides and documents when applicable.",
-   "source_url": "https://stockanalysis.com/quote/nse/HINDUNILVR/transcripts/"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Annual Reports | Unilever - hul.co.in",
-   "excerpt": "Our archived annual reports are arranged in reverse chronological order for your convenience",
-   "source_url": "https://www.hul.co.in/investors/annual-reports-and-performance-highlights/annual-reports/"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Annual Report - Archives | Unilever - hul.co.in",
-   "excerpt": "May 21, 2024 · Our archived annual reports are arranged in reverse chronological order for your convenience.",
-   "source_url": "https://www.hul.co.in/investors/annual-reports-and-performance-highlights/annual-reports/annual-report-archives/"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Hindustan Unilever Ltd. - Annual Report 2026 | FinancialFilings",
-   "excerpt": "Jun 2, 2026 · Access the 2026 Annual Report content for Hindustan Unilever Ltd.. View the original document or AI-processed analysis.",
-   "source_url": "https://financialfilings.com/filings/hindustan-unilever-ltd/annual-report/2026/47936615/"
   }
  ],
  "industry_info": {
@@ -1661,6 +1619,13 @@
   "industry": "Diversified FMCG"
  },
  "is_track_c": true,
+ "peer_tickers": [
+  "ITC",
+  "NESTLEIND",
+  "DABUR",
+  "GODREJCP",
+  "COLPAL"
+ ],
  "data_quality_flags": [],
- "fetched_at": "2026-10-20 23:28"
+ "fetched_at": "2026-10-21 00:00"
 }

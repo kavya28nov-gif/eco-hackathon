@@ -1601,29 +1601,22 @@
    "company": "BRITANNIA",
    "topic": "investor presentation underlying volume growth price quarterly results",
    "doc_title": "Britannia Industries - Investor Presentations - Trendlyne",
-   "excerpt": "May 8, 2026 · Britannia Industries Investor Presentation: Get insights into company performance, financials, capex plans and more",
+   "excerpt": "May 8, 2026 · Britannia Industries quarterly results: revenue, profit, and P&L – 13 quarter history",
    "source_url": "https://trendlyne.com/fundamentals/documents-investor-presentation/220/BRITANNIA/britannia-industries-ltd/"
   },
   {
    "company": "BRITANNIA",
    "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Britannia Industries - Quarterly Results and Financial ...",
-   "excerpt": "1 day ago · Quarterly Net Profit Britannia Industries Jun-2026 Quarterly Net Profit is Rs 576 Cr which is growth of 15.7% YoY. ... *All financials are in INR Cr and price data in INR",
-   "source_url": "https://trendlyne.com/fundamentals/financials-v2/220/BRITANNIA/britannia-industries-ltd/"
+   "doc_title": "Britannia Industries Ltd. Investor Presentation - Trendlyne",
+   "excerpt": "Pursuant to Regulation 30 read with Clause 15 of Para A of Part A of Schedule III of the SEBI Listing Regulations, 2015, please find enclosed the copy of Investors/Analysts Conference Call Presentation pertaining to the financial results and operations of the Company for the quarter ended 30th June, 2026.",
+   "source_url": "https://trendlyne.com/investor-presentations/220/BRITANNIA/britannia-industries-ltd/"
   },
   {
    "company": "BRITANNIA",
    "topic": "earnings call transcript quick commerce modern trade rural demand",
    "doc_title": "Earnings call transcript: Britannia Industries posts strong ...",
-   "excerpt": "Aug 7, 2026 · Britannia delivered a solid start to FY2027, with growth broadening across its core biscuit business and newer adjacencies. Management said the quarter showed mid-teen revenue growth momentum in...",
+   "excerpt": "Aug 7, 2026 · General trade improved, while e-commerce and quick commerce continued to grow faster than the core channel. Management said it expects to keep FY2027 EBITDA margins at least at FY2026 levels if ...",
    "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-britannia-industries-posts-strong-q1-2026-growth-93CH-4845102"
-  },
-  {
-   "company": "BRITANNIA",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Britannia Industries Limited Q4 2026 Earnings Call Transcript",
-   "excerpt": "May 8, 2026 · Ladies and gentlemen, good day and welcome to The Britannia Industries Limited Q4FY26 earnings conference call. As a reminder, all participant lines will be in the listen only mode and there will be an opportunity for you to ask questions after the presentation concludes.",
-   "source_url": "https://alphastreet.com/india/britannia-industries-limited-britannia-q4-2026-earnings-call-transcript/"
   },
   {
    "company": "BRITANNIA",
@@ -1634,9 +1627,16 @@
   },
   {
    "company": "BRITANNIA",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Britannia Industries Limited Q4 2026 Earnings Call Transcript",
+   "excerpt": "May 8, 2026 · Britannia Industries Limited (NSE: BRITANNIA) Q4 2026 Earnings Call dated May. 08, 2026 Corporate Participants: Ayush Agarwal — Investor Relations Rakshit Hargave — Chief Executive...",
+   "source_url": "https://alphastreet.com/india/britannia-industries-limited-britannia-q4-2026-earnings-call-transcript/"
+  },
+  {
+   "company": "BRITANNIA",
    "topic": "annual report trade receivables channel inventory filing",
    "doc_title": "investor page - Britannia",
-   "excerpt": "Jun 30, 2026 · Understand key financial aspects before considering Britannia shares today.",
+   "excerpt": "Jun 30, 2026 · Get insights into Britannia's stock market performance and investment potential. Understand key financial aspects before considering Britannia shares today.",
    "source_url": "https://www.britannia.co.in/investors/financial-performance/annual-report"
   },
   {
@@ -1661,6 +1661,12 @@
   "industry": "Packaged Foods"
  },
  "is_track_c": true,
+ "peer_tickers": [
+  "NESTLEIND",
+  "ITC",
+  "TATACONSUM",
+  "HINDUNILVR"
+ ],
  "data_quality_flags": [],
- "fetched_at": "2026-10-20 23:29"
+ "fetched_at": "2026-10-21 00:00"
 }

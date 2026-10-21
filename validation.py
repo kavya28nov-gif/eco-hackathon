@@ -443,6 +443,7 @@ def test_revenue_vs_profit(pool, profit_override: Optional[Dict[str, float]] = N
         "history_left_out": sorted({r["period"] for r in rows[:-1]} - {r["period"] for r in hist_rows}),
         "headline_value": latest["gap_pp"], "persistence": persistence, "rows": rows,
         "material": abs(latest["gap_pp"]) >= GAP_PP, "min_move": GAP_PP, "yoy": True,
+        "direction": 1 if latest["gap_pp"] > 0 else -1,
         "periods_used": [latest["period"], latest["base"]],
         "metrics_used": ["revenue_from_operations", "net_profit"],
         "evidence_ids": latest["evidence_ids"],
@@ -473,6 +474,7 @@ def test_cash_conversion(pool, profit_override: Optional[Dict[str, float]] = Non
         "latest_period": latest["period"], "score": round(abs(robust_z(latest["ocf_to_profit"], hist)), 2),
         "headline_value": latest["ocf_to_profit"], "history_median": round(med, 2),
         "material": abs(latest["ocf_to_profit"] - med) >= MIN_CASH_RATIO_MOVE,
+        "direction": 1 if latest["ocf_to_profit"] > med else -1,
         "min_move": MIN_CASH_RATIO_MOVE, "yoy": False,
         "persistence": persistence, "rows": rows, "periods_used": [latest["period"]],
         "metrics_used": ["operating_cash_flow", "net_profit"], "evidence_ids": latest["evidence_ids"],
@@ -499,6 +501,7 @@ def test_level_trend(pool, metric: str, period_type: str, title: str, min_move: 
         "score": round(abs(robust_z(vals[-1], hist)), 2), "headline_value": vals[-1],
         "history_median": med, "persistence": persistence,
         "material": abs(vals[-1] - med) >= min_move, "min_move": min_move,
+        "direction": 1 if vals[-1] > med else -1,
         "yoy": False, "unit": s[periods[-1]].unit,
         "rows": [{"period": p, "value": e.value, "evidence_ids": [e.id]} for p, e in s.items()],
         "periods_used": [periods[-1]], "metrics_used": [metric], "evidence_ids": [s[periods[-1]].id],
@@ -531,6 +534,7 @@ def test_yoy_change(pool, metric: str, title: str, min_move: float):
         "score": round(abs(robust_z(latest["change_pp"], hist)), 2),
         "headline_value": latest["change_pp"], "history_median": round(statistics.median(hist), 1),
         "persistence": persistence, "material": abs(latest["change_pp"]) >= min_move,
+        "direction": 1 if latest["change_pp"] > 0 else -1,
         "min_move": min_move, "yoy": True, "unit": s[latest["period"]].unit, "rows": rows,
         "periods_used": [latest["period"], latest["base"]], "metrics_used": [metric],
         "evidence_ids": latest["evidence_ids"],
@@ -680,22 +684,40 @@ def red_team(angle: Dict[str, Any], pool: List[Evidence], conflicts: List[Dict[s
     if not peer_pools:
         peer = {"result": "not_run", "detail": "No peer data supplied, so a sector-wide explanation cannot be ruled out."}
     else:
-        same, tested = [], []
+        same, tested, seen = [], [], []
         for name, ppool in peer_pools.items():
             pa = {a["test"]: a for a in detect_angles(ppool)}.get(test)
-            if pa:
-                tested.append(name)
-                if pa["score"] >= INVESTIGATE_SCORE and (pa["headline_value"] > 0) == (angle["headline_value"] > 0):
-                    same.append(name)
+            if not pa:
+                continue
+            tested.append(name)
+            # "same pattern" = the peer's own test is also unusual, also material,
+            # and in the same direction. Only then is it a sector story.
+            # direction = above (+1) or below (-1) normal. Earlier this compared the
+            # sign of headline_value, but for days or cash ratio that is a level
+            # (always positive), so ANY unusual peer counted as "same pattern".
+            is_same = (pa["score"] >= INVESTIGATE_SCORE and pa.get("material", True)
+                       and pa.get("direction") == angle.get("direction"))
+            if is_same:
+                same.append(name)
+            seen.append(f"{name} {pa['headline_value']} in {pa['latest_period']} (score {pa['score']})")
+        values = "Peer readings: " + "; ".join(seen) + "."
         if not tested:
             peer = {"result": "not_run", "detail": "Peers lacked the data for this test."}
         elif len(same) >= max(1, len(tested) / 2):
-            peer = {"result": "sector_wide", "detail": f"Same pattern at {', '.join(same)} (of {', '.join(tested)})."}
+            peer = {"result": "sector_wide",
+                    "detail": f"Same pattern at {', '.join(same)} (of {', '.join(tested)}). {values}"}
+        elif same:
+            # a minority of peers share it -- not a sector story, but not cleanly
+            # company-specific either, so we say so instead of rounding it off
+            peer = {"result": "partly_shared",
+                    "detail": f"Also seen at {', '.join(same)}, but not at "
+                              f"{', '.join(n for n in tested if n not in same)}. {values}"}
         else:
             peer = {"result": "company_specific",
-                    "detail": f"Pattern not seen at {', '.join(n for n in tested if n not in same)}."}
+                    "detail": f"Pattern not seen at {', '.join(tested)}. {values}"}
     checks.append({"check": "peer_control", "argument": "Peers may show the same pattern (sector story).",
-                   "result": {"company_specific": "survived", "sector_wide": "fatal"}.get(peer["result"], "not_run"),
+                   "result": {"company_specific": "survived", "partly_shared": "weakened",
+                              "sector_wide": "fatal"}.get(peer["result"], "not_run"),
                    "detail": peer["detail"]})
 
     verdict = {"fatal": any(c["result"] == "fatal" for c in checks),
@@ -1163,7 +1185,7 @@ if __name__ == "__main__":
 # timeline                [{period, note}]
 # evidence                [{id, fact, value, unit, source_name, source_url, tier, scope, page, quote}]
 # counterarguments        [{check, argument, result: survived|weakened|fatal|not_run, detail}]
-# peer_check              {result: company_specific|sector_wide|not_run, detail}
+# peer_check              {result: company_specific|partly_shared|sector_wide|not_run, detail}
 # falsification_condition str
 # strength                "Strong" | "Moderate" | "Weak"
 # strength_reasons        [str]

@@ -1138,7 +1138,71 @@
    "source_url": "https://www.screener.in/company/NESTLEIND/consolidated/"
   }
  ],
- "text_excerpts": [],
+ "text_excerpts": [
+  {
+   "company": "NESTLEIND",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Financial Results, Detailed Reports | Nestlé IN",
+   "excerpt": "Financial Results Home Investors Investor Information Financial Results Financial Results",
+   "source_url": "https://www.nestle.in/investors/stockandfinancials/financialresults"
+  },
+  {
+   "company": "NESTLEIND",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Nestlé India (NESTLEIND) investor relations material",
+   "excerpt": "6 days ago · Q1 sales up 25.4% YoY, profit after tax up 47.9%, and strong growth across all segments. Record quarterly growth and robust cash flow support higher dividends and future expansion. Premiumization, digital, and rural strategies drive robust growth and sustainability.",
+   "source_url": "https://quartr.com/companies/nestl-india-limited_4765"
+  },
+  {
+   "company": "NESTLEIND",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Nestlé India NESTLEIND Investor Presentation August 2026",
+   "excerpt": "Aug 4, 2026 · Nestlé India (NSE:NESTLEIND) filed an investor presentation with the NSE on 4 August 2026, pursuant to Regulation 30 of SEBI Listing Regulations, ahead of a virtual analyst and institutional investor meet held the same day at 2:00 PM IST, chaired by Chairman and Managing Director Manish Tiwary.",
+   "source_url": "https://www.kalkine.co.in/article/announcements/nestle-india-nsenestleind-what-did-its-august-2026-investor-presentation-reveal"
+  },
+  {
+   "company": "NESTLEIND",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Nestlé India (NESTLEIND) Investor Relations, Earnings Summary ...",
+   "excerpt": "6 days ago · Access Nestlé India (NESTLEIND) IR material: earnings summary, earnings date, guidance, transcripts, filings & reports, and live & recorded earnings calls.",
+   "source_url": "https://quartr.com/companies/nestl-india-limited_4765"
+  },
+  {
+   "company": "NESTLEIND",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Nestle India Limited — Q1FY27 earnings call summary",
+   "excerpt": "Aug 7, 2026 · AI-generated summary of Nestle India Limited Q1FY27 earnings call: outlook, demand, costs, margins and risks from the company transcript.",
+   "source_url": "https://indianstockalerts.com/transcripts/NESTLEIND/Q1FY27"
+  },
+  {
+   "company": "NESTLEIND",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Nestle India (NESTLEIND) — concall transcript | StockFin",
+   "excerpt": "Jun 30, 2026 · Nestlé India's management presented its growth strategy focusing on volume, premiumization, and rural expansion during the earnings call.",
+   "source_url": "https://www.stockfin.ai/news/NESTLEIND/2026-06-30/concall-transcript"
+  },
+  {
+   "company": "NESTLEIND",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Nestlé Financial Statements & Nestle India Annual Report ...",
+   "excerpt": "Mar 31, 2024 · Explore Nestlé financial statements and annual reports of Nestlé India for insights into financial performance, strategic initiatives, and future outlook.",
+   "source_url": "https://www.nestle.in/investors/stockandfinancials/annualreports"
+  },
+  {
+   "company": "NESTLEIND",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "FY2025-26 Annual Report & 67th AGM Notice | Nestlé IN",
+   "excerpt": "Read Nestlé India’s Annual Report FY 2025-26, including financial performance, governance updates, and the Notice of the 67th Annual General Meeting.",
+   "source_url": "https://www.nestle.in/media/specialannouncements/annual-report-financial-year-ended-31st-march-2026-containing-notice-67th-annual-general-meeting"
+  },
+  {
+   "company": "NESTLEIND",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Nestlé India Limited",
+   "excerpt": "Copy of the Notice of the 65th AGM and the Annual Report 2023-24 are also being uploaded on the website of the Company at www.nestle.in and National Securities Depository Limited at www.evoting.nsdl.com.",
+   "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_24138_NESTLEIND_2023_2024_15062024233329.pdf"
+  }
+ ],
  "industry_info": {
   "broad_sector": "Fast Moving Consumer Goods",
   "sector": "Fast Moving Consumer Goods",
@@ -1146,8 +1210,14 @@
   "industry": "Packaged Foods"
  },
  "is_track_c": true,
+ "peer_tickers": [
+  "BRITANNIA",
+  "HINDUNILVR",
+  "TATACONSUM",
+  "ITC"
+ ],
  "data_quality_flags": [
   "Non-standard periods (year-end change / not 12 months): Dec_2023, FY2024, Sep_2026. Kept as-is, but not comparable with normal years."
  ],
- "fetched_at": "2026-10-20 23:29"
+ "fetched_at": "2026-10-21 00:00"
 }

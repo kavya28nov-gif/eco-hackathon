@@ -56,6 +56,27 @@ YEARS_TO_KEEP = 7
 TRACK_C_BROAD_SECTORS = ("Fast Moving Consumer Goods",)
 TRACK_C_SECTORS = ("Consumer Durables", "Consumer Services")
 
+# 2. Peer map for the peer-control check (ONE place only -- app.py and tests read it from here).
+# Rule for picking: same kind of product and same customer, listed in India, 3 to 5 names.
+# If a company is not here, we fall back to screener's own same-industry peer list,
+# so a company the judges pick live still gets peers.
+TRACK_C_PEERS = {
+    "HINDUNILVR": ["ITC", "NESTLEIND", "DABUR", "GODREJCP", "COLPAL"],
+    "ITC":        ["HINDUNILVR", "NESTLEIND", "BRITANNIA", "TATACONSUM", "DABUR"],
+    "NESTLEIND":  ["BRITANNIA", "HINDUNILVR", "TATACONSUM", "ITC"],
+    "BRITANNIA":  ["NESTLEIND", "ITC", "TATACONSUM", "HINDUNILVR"],
+    "TATACONSUM": ["HINDUNILVR", "NESTLEIND", "BRITANNIA", "MARICO"],
+    "ASIANPAINT": ["BERGEPAINT", "KANSAINER", "INDIGOPNTS", "JSWDULUX"],
+    "TITAN":      ["KALYANKJIL", "SENCO", "THANGAMAYL"],
+    "TRENT":      ["DMART", "VMART", "SHOPERSTOP"],
+    "DMART":      ["TRENT", "VMART", "SHOPERSTOP"],
+    "DABUR":      ["MARICO", "GODREJCP", "COLPAL", "EMAMILTD", "HINDUNILVR"],
+    "MARICO":     ["DABUR", "GODREJCP", "EMAMILTD", "COLPAL", "HINDUNILVR"],
+    "GODREJCP":   ["DABUR", "MARICO", "HINDUNILVR", "EMAMILTD"],
+    "COLPAL":     ["HINDUNILVR", "DABUR", "GODREJCP"],
+}
+MAX_PEERS = 5
+
 
 def _search_screener(company_name: str) -> Optional[str]:
     """Asks screener's own search box for the ticker. Returns None if nothing found
@@ -83,6 +104,10 @@ def resolve_ticker(company_name: str, allow_online: bool = True) -> str:
     clean = company_name.lower().strip()
     if clean in TRACK_C_TICKERS:
         return TRACK_C_TICKERS[clean]
+    # already a ticker we know (e.g. a peer like "KANSAINER") -- no need to search
+    known = set(TRACK_C_TICKERS.values()) | set(TRACK_C_PEERS) | {p for ps in TRACK_C_PEERS.values() for p in ps}
+    if company_name.strip().upper() in known:
+        return company_name.strip().upper()
     # "Hindustan Unilever Ltd" should still hit "hindustan unilever". Whole-word match
     # only, because plain substring match was sending "in" to Hindustan Unilever.
     for key, ticker in sorted(TRACK_C_TICKERS.items(), key=lambda kv: -len(kv[0])):
@@ -148,25 +173,45 @@ def _parse_period(col_name: str, is_quarterly: bool) -> str:
     return f"{month}_{year}"
 
 
+def _latest_year(soup) -> int:
+    """Latest year in the annual P&L header, 0 if the table is empty or missing.
+    Only the section is not enough: a company with no subsidiaries has an empty
+    consolidated page, and some pages have only the label column and no years."""
+    pl = soup.find("section", id="profit-loss")
+    table = pl.find("table", class_="data-table") if pl else None
+    if not table or not table.find("thead"):
+        return 0
+    years = [int(y) for th in table.find("thead").find_all("th")
+             for y in re.findall(r"\b(20\d{2}|19\d{2})", th.get_text())]
+    return max(years, default=0)
+
+
 def _get_screener_page(ticker: str):
     """Downloads the screener page once. Returns (soup, url) or (None, url).
-    Try consolidated view first; fall back to standalone if needed."""
+    Consolidated is preferred, but only if it is current. Colgate's consolidated page,
+    for example, stops in 2010 (old subsidiaries) while standalone is up to date --
+    so when consolidated is behind, we also try standalone and keep the newer one."""
     urls = [
         f"https://www.screener.in/company/{ticker}/consolidated/",
         f"https://www.screener.in/company/{ticker}/"
     ]
+    best, best_url, best_year = None, urls[0], 0
     for url in urls:
         try:
             resp = requests.get(url, headers=HEADERS, timeout=15)
         except Exception as e:
             print(f"[Warning] screener not reachable for {ticker}: {e}")
             continue
-        if resp.status_code == 200:
-            soup = BeautifulSoup(resp.text, "html.parser")
-            # Check if the page actually has data tables
-            if soup.find("section", id="profit-loss"):
-                return soup, url
-    return None, urls[0]
+        if resp.status_code != 200:
+            continue
+        soup = BeautifulSoup(resp.text, "html.parser")
+        year = _latest_year(soup)
+        if year > best_year:
+            best, best_url, best_year = soup, url, year
+        # a consolidated page with last year's (or this year's) numbers is good enough
+        if best_year >= int(time.strftime("%Y")) - 1:
+            break
+    return best, best_url
 
 
 def scrape_industry_info(soup) -> Dict[str, str]:
@@ -182,6 +227,34 @@ def scrape_industry_info(soup) -> Dict[str, str]:
         if title in ("Broad Sector", "Sector", "Broad Industry", "Industry"):
             info[title.lower().replace(" ", "_")] = a.get_text(strip=True)
     return info
+
+
+def _screener_peers(soup, ticker: str) -> List[str]:
+    """Screener's own same-industry peers (ranked by market cap). Used only when the
+    company is not in TRACK_C_PEERS. Empty list if anything fails."""
+    tag = soup.find(attrs={"data-warehouse-id": True}) if soup else None
+    if not tag:
+        return []
+    try:
+        resp = requests.get(f"https://www.screener.in/api/company/{tag['data-warehouse-id']}/peers/",
+                            headers=HEADERS, timeout=15)
+        found = re.findall(r'href="/company/([^/]+)/', resp.text)
+    except Exception as e:
+        print(f"[Warning] screener peers failed for {ticker}: {e}")
+        return []
+    # keep order, drop the company itself and duplicates
+    return [t for t in dict.fromkeys(found) if t != ticker][:MAX_PEERS]
+
+
+def peers_for(ticker: str) -> List[str]:
+    """Peer tickers for a company: our hand-checked map first, else what screener
+    gave last time we fetched it (stored in the cache). Works offline."""
+    if ticker in TRACK_C_PEERS:
+        return TRACK_C_PEERS[ticker][:MAX_PEERS]
+    if os.path.exists(cache_path(ticker)):
+        with open(cache_path(ticker), encoding="utf-8") as f:
+            return json.load(f).get("peer_tickers", [])
+    return []
 
 
 def is_track_c(industry_info: Dict[str, str]) -> Optional[bool]:
@@ -311,13 +384,16 @@ def search_public_filings_and_excerpts(company_name: str, ticker: str) -> List[D
     return excerpts
 
 
-def fetch_company_data(company_name: str, save_to_cache: bool = True) -> Dict[str, Any]:
+def fetch_company_data(company_name: str, save_to_cache: bool = True,
+                       include_text: bool = True) -> Dict[str, Any]:
     """
     MAIN FUNCTION CALLED BY PERSON 2 AND PERSON 4.
     Accepts any company name (e.g., 'HUL', 'ITC', 'Britannia') and returns
     structured financial records + source-linked qualitative excerpts.
     A successful fetch is also saved to data/cache/<TICKER>.json, so the offline
     demo mode has a backup for every company we have ever run.
+    include_text=False skips searches and PDFs -- used for peers, where we only
+    need the numbers, so 5 peers take seconds and not minutes.
     """
     ticker = resolve_ticker(company_name)
     flags: List[str] = []
@@ -326,9 +402,13 @@ def fetch_company_data(company_name: str, save_to_cache: bool = True) -> Dict[st
     soup, used_url = _get_screener_page(ticker)
     financial_records = scrape_structured_financials(ticker, soup, used_url)
     industry_info = scrape_industry_info(soup)
+    peer_tickers = TRACK_C_PEERS.get(ticker) or _screener_peers(soup, ticker)
     if not financial_records:
         flags.append(f"No financial tables found on screener for ticker '{ticker}' "
                      f"(wrong name, or site not reachable).")
+    elif soup is not None and _latest_year(soup) < int(time.strftime("%Y")) - 1:
+        flags.append(f"Latest annual data for {ticker} is from {_latest_year(soup)} -- "
+                     f"stale, findings may not describe the company today.")
     odd = sorted({r["period"] for r in financial_records if r["period_months"] not in (3, 12)
                   or (r["period_type"] == "annual" and not r["period"].startswith("FY"))})
     if odd:
@@ -336,7 +416,7 @@ def fetch_company_data(company_name: str, save_to_cache: bool = True) -> Dict[st
                      f"Kept as-is, but not comparable with normal years.")
 
     # 2. Fetch qualitative excerpts & filing URLs for triangulation
-    text_excerpts = search_public_filings_and_excerpts(company_name, ticker)
+    text_excerpts = search_public_filings_and_excerpts(company_name, ticker) if include_text else []
 
     data = {
         "company": company_name,
@@ -348,12 +428,41 @@ def fetch_company_data(company_name: str, save_to_cache: bool = True) -> Dict[st
         # added fields (old fields above are frozen, do not rename them)
         "industry_info": industry_info,
         "is_track_c": is_track_c(industry_info),
+        "peer_tickers": peer_tickers,
         "data_quality_flags": flags,
         "fetched_at": time.strftime("%Y-%m-%d %H:%M"),
     }
     if save_to_cache and financial_records:
+        if not include_text and os.path.exists(cache_path(ticker)):
+            # HUL is also ITC's peer. A light peer fetch must not wipe out the quotes
+            # we saved when HUL itself was run, so we carry the old text across.
+            with open(cache_path(ticker), encoding="utf-8") as f:
+                old = json.load(f)
+            data["text_excerpts"] = old.get("text_excerpts", [])
+            data["company"] = old.get("company", data["company"])   # keep "HUL", not "HINDUNILVR"
         save_cache(data)
     return data
+
+
+def fetch_peers(tickers: List[str], progress=None) -> Dict[str, Dict[str, Any]]:
+    """Numbers-only fetch for each peer, all at the same time (threads), because
+    one by one 5 peers was taking ~50 seconds. A peer that fails is just skipped."""
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    out: Dict[str, Dict[str, Any]] = {}
+    with ThreadPoolExecutor(max_workers=5) as pool:
+        jobs = {pool.submit(fetch_company_data, t, True, False): t for t in tickers}
+        for job in as_completed(jobs):
+            t = jobs[job]
+            try:
+                d = job.result()
+            except Exception as e:
+                d = None
+                print(f"[Warning] peer {t} failed: {e}")
+            if d and d.get("financial_records"):
+                out[t] = d
+            if progress:
+                progress(f"Peer {t}: {'ok' if t in out else 'no data, skipped'}")
+    return out
 
 
 # ---------------------------------------------------------------------------

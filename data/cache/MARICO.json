@@ -1589,7 +1589,71 @@
    "source_url": "https://www.screener.in/company/MARICO/consolidated/"
   }
  ],
- "text_excerpts": [],
+ "text_excerpts": [
+  {
+   "company": "MARICO",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Q4 FY25 Results - marico.com",
+   "excerpt": "Volume and revenue growth in India business at 14-quarter high | Robust quarter for International business Q4FY25 (YoY)",
+   "source_url": "https://marico.com/investorspdf/Earnings_Presentation_Q4FY25.pdf"
+  },
+  {
+   "company": "MARICO",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Presentation - Marico",
+   "excerpt": "Medium-term Volume growth aspiration Headroom for Growth 37% India Business Revenue Share Conversion from loose to branded",
+   "source_url": "https://marico.com/investorspdf/Marico_Limited_-_Investor_Presentation_-_June_2024.pdf"
+  },
+  {
+   "company": "MARICO",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Marico - Investor Presentations - Trendlyne",
+   "excerpt": "Feb 17, 2016 · Marico investor presentations, annual reports, credit ratings, and earnings calls with AI summary, video, and audio access",
+   "source_url": "https://trendlyne.com/fundamentals/documents-investor-presentation/840/MARICO/marico-ltd/"
+  },
+  {
+   "company": "MARICO",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "PDF Marico Limited Q3FY26 Earnings Conference Call\"",
+   "excerpt": "gaining or sustaining penetration on a MAT basis. Among channels, while e-commerce and quick commerce were leading growth drivers, we saw a clear improvement in traditional trade, marking the outcome of consistent inves",
+   "source_url": "https://marico.com/investorspdf/Marico_Limited_Q3FY26_Earnings_Call_Transcript.pdf"
+  },
+  {
+   "company": "MARICO",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "PDF \"Marico Limited Q4FY26 Earnings Conference Call\"",
+   "excerpt": "In parallel, alternate channels, including organized retail, e-commerce and quick commerce continue to scale strongly, driving differential growth in urban and premium portfolios.",
+   "source_url": "https://marico.com/investorspdf/Marico_Limited_Q4FY26_Earnings_Call_Transcript.pdf"
+  },
+  {
+   "company": "MARICO",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Marico Ltd Q3 2026 Earnings Call Transcript - AlphaStreet",
+   "excerpt": "Transcript Marico Ltd (MARICO) Q1 2026 Earnings Call Transcript Jan 22, 2026 Ladies and gentlemen, good day and welcome to Marico Limited's Q3FY26 earnings conference call. We have with us the senior management of Marico, represented by Mr. Sagata Gupta, MD and CEO and Mr. Pawan Agrawal Group, CFO and CEO, International Business.",
+   "source_url": "https://alphastreet.com/india/marico-ltd-marico-q3-2026-earnings-call-transcript/"
+  },
+  {
+   "company": "MARICO",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "PDF Future-ready. Agile. Resilient. - marico.com",
+   "excerpt": "The financial metrics and data provided in this Integrated Annual Report are specific to Marico Limited, encompassing both its domestic and international business operations, subsidiaries and joint ventures.",
+   "source_url": "https://marico.com/investorspdf/Marico_Annual_Report_FY25.pdf"
+  },
+  {
+   "company": "MARICO",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "PDF marico.com",
+   "excerpt": "marico.com",
+   "source_url": "https://marico.com/investorspdf/Marico_Annual_Report_FY26.pdf"
+  },
+  {
+   "company": "MARICO",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Marico - Annual Reports - CompaniesMarketCap.com",
+   "excerpt": "Marico Annual Reports from 1999-2000 to 2025-2026",
+   "source_url": "https://companiesmarketcap.com/marico/annual-reports/"
+  }
+ ],
  "industry_info": {
   "broad_sector": "Fast Moving Consumer Goods",
   "sector": "Fast Moving Consumer Goods",
@@ -1597,6 +1661,13 @@
   "industry": "Edible Oil"
  },
  "is_track_c": true,
+ "peer_tickers": [
+  "DABUR",
+  "GODREJCP",
+  "EMAMILTD",
+  "COLPAL",
+  "HINDUNILVR"
+ ],
  "data_quality_flags": [],
- "fetched_at": "2026-10-20 23:30"
+ "fetched_at": "2026-10-21 00:00"
 }

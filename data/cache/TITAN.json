@@ -1607,9 +1607,51 @@
   {
    "company": "TITAN",
    "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Titan Company - Quarterly Results and Financial Statement ... - Trendlyne",
-   "excerpt": "Titan Company quarterly and annual financials: results, revenue, profit, P&L, balance sheet, cash flow, financial ratios, revenue mix, peer comparison, and financial ...",
-   "source_url": "https://trendlyne.com/fundamentals/financials/1403/TITAN/titan-company-ltd/"
+   "doc_title": "Titan Company Ltd. Documents | Concall Transcripts | Investor ...",
+   "excerpt": "Access quarterly documents, investor presentations, financial statements, earnings transcripts, and other key documents for Titan Company Ltd..",
+   "source_url": "https://concall.in/company/100114/updates/documents"
+  },
+  {
+   "company": "TITAN",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "“Titan Company Limited's Q1FY'27 Earnings Conference Call”",
+   "excerpt": "Sub: Earnings Call Transcripts Pursuant to Regulation 46(2)(oa) of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, we hereby inform the exchanges that the transcript of audio call recording of the Company’s Analyst Call to discuss the unaudited Financial Results (Standalone and Consolidated) for the first quarter ended 30th June 2026 is attached herewith.",
+   "source_url": "https://www.titancompany.in/sites/default/files/2026-08/Q1FY27+-+Earnings+Call+transcript.pdf"
+  },
+  {
+   "company": "TITAN",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Titan Company Ltd (TITAN) Q4 2026 Earnings Call Transcript",
+   "excerpt": "May 8, 2026 · Titan Company Ltd (NSE: TITAN) Q4 2026 Earnings Call dated May. 08, 2026 Presentation Operator Transcript Transcript Transcript Transcript Transcript Ladies and gentlemen, good day and welcome to Titan Co. Ltd. Q4NFI 26 earning conference call. As a reminder, all participant line will be in the listen only mode and there will be an opportunity for you to ask question after the presentation ...",
+   "source_url": "https://alphastreet.com/india/titan-company-ltd-titan-q4-2026-earnings-call-transcript/"
+  },
+  {
+   "company": "TITAN",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "500114 Symbol: TITAN Sub: Earnings Call Transcripts",
+   "excerpt": "Pursuant to Regulation 46(2)(oa) of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, we hereby inform the exchanges that the transcript of audio call recording of the Company’s Analyst Call to discuss the Audited Financial Results (Standalone and Consolidated) for the fourth quarter and year ended 31st March 2026 is attached herewith.",
+   "source_url": "https://www.titancompany.in/sites/default/files/2026-05/SEIntimationtranscriptq4.pdf"
+  },
+  {
+   "company": "TITAN",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Annual Reports - Titan Company",
+   "excerpt": "View or download Titan Company Ltd's Annual Report, including financial reports, investor presentations, and corporate governance.",
+   "source_url": "https://www.titancompany.in/investors/annual-reports"
+  },
+  {
+   "company": "TITAN",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Annual Report - SEC.gov",
+   "excerpt": "Strategic acquisitions have significantly enhanced and diversified Titan’s product portfolio and distribution channels, particularly in the outdoor power equipment, power sports, and high-speed trailer markets—reinforcing Titan’s position as a complete solutions provider.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/899751/000089975126000037/titaninternational_2025arx.pdf"
+  },
+  {
+   "company": "TITAN",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Titan Company Limited 2025 filings — annual reports ...",
+   "excerpt": "All 289 regulatory filings released by Titan Company Limited in 2025 — annual reports, quarterly results, ad-hoc disclosures, and corporate notices, sourced directly from the official regulator.",
+   "source_url": "https://financialfilings.com/companies/titan-company-limited/2025/"
   }
  ],
  "industry_info": {
@@ -1619,6 +1661,11 @@
   "industry": "Gems, Jewellery And Watches"
  },
  "is_track_c": true,
+ "peer_tickers": [
+  "KALYANKJIL",
+  "SENCO",
+  "THANGAMAYL"
+ ],
  "data_quality_flags": [],
- "fetched_at": "2026-10-20 23:29"
+ "fetched_at": "2026-10-20 23:59"
 }
