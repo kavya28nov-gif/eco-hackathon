@@ -123,6 +123,44 @@ def test_hul_demerger_gain_still_rejected():
     assert killed and killed[0]["reason"].startswith("one_off")
 
 
+def test_quarter_from_filing_date():
+    # results filed in early August are about the June quarter = Q1 of the NEXT FY
+    assert research._period_from_filing_date("04-Aug-2026 17:15:14") == "Q1_FY2027"
+    assert research._period_from_filing_date("07-May-2026 20:10:39") == "Q4_FY2026"
+    # filed 3 July: June quarter is not "over" by a week yet -> still the March quarter
+    assert research._period_from_filing_date("03-Jul-2026 10:00:00") == "Q4_FY2026"
+
+
+def test_volume_wording_and_decimals():
+    pages = ["Results. India FMCG business reported 9.5% growth with an underlying Volume growth of 5%. "
+             "Delivered 7% Underlying Sales Growth (USG), driven by 6% Underlying Volume Growth (UVG). "
+             "Soap volumes declined by 3% in the quarter."]
+    found = research._extract_growth(pages)
+    assert found["underlying_volume_growth_pct"][0] == 5.0
+    assert found["underlying_sales_growth_pct"][0] == 7.0
+    # the quote must keep "9.5%" whole -- a decimal point is not a sentence end
+    assert "9.5%" in found["underlying_volume_growth_pct"][2]
+    assert research._extract_growth(["Soap volumes declined by 3% this quarter."])[
+        "underlying_volume_growth_pct"][0] == -3.0
+
+
+def test_segment_usg_is_not_used_as_company_figure():
+    """Godrej regression: a segment 'USG ~47%' when consolidated revenue grew ~15%
+    must not be used as the company's sales growth."""
+    def rec(metric, period, value, unit="INR crore"):
+        return {"metric": metric, "value": value, "unit": unit, "period": period, "period_type": "quarterly",
+                "source_url": "https://www.screener.in/company/X/", "doc_title": "x"}
+    data = {"company": "X", "ticker": "X", "text_excerpts": [], "financial_records": [
+        rec("revenue_from_operations", "Q1_FY2026", 100.0), rec("revenue_from_operations", "Q1_FY2027", 115.0),
+        rec("underlying_volume_growth_pct", "Q1_FY2027", 9.0, "percentage"),
+        rec("underlying_sales_growth_pct", "Q1_FY2027", 47.0, "percentage")]}
+    pool, _ = validation.build_evidence_pool(data)
+    angle = validation.test_price_vs_volume(pool)
+    assert angle["sales_basis"] == "reported revenue growth"
+    assert angle["rows"][-1]["sales_growth_pct"] == 15.0
+    assert angle["usg_rejected"]
+
+
 if __name__ == "__main__":
     # human-readable summary, for showing results after each priority
     for t in CACHED:

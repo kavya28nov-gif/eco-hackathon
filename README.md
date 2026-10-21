@@ -11,6 +11,17 @@ Tick "Use cached data (offline demo)" in the sidebar if live scraping is blocked
 It loads `data/cache/<TICKER>.json` for whatever company is typed. Every successful live run saves
 there, so before the finals just run each likely company once with internet on.
 
+## Demo reliability (finals)
+- Every source has a 15 s cap (`SOURCE_TIMEOUT_S` in research.py), including the whole PDF download.
+- One live run has a 3 minute budget (app.py): own data by 2:00, peers by 2:45, then validation.
+  Whatever is not back in time is skipped and listed in the data-quality flags; the run never hangs.
+- Order inside a fetch: screener numbers -> NSE filings -> web search (only if time is left).
+- The status box shows every stage with elapsed seconds, including each filing and each peer.
+- Measured live from here: Asian Paints 31 s, Trent 19 s (never fetched before), HUL ~25 s.
+- **Screener can rate-limit.** After a few hundred requests in one session it refused connections for a while.
+  A failed fetch never overwrites the cache, so offline mode still works. Before the finals: run each likely company
+  once (it caches it and its peers), and do not re-fetch everything in a loop on the day.
+
 ## Test (offline, no API key)
 ```
 pytest tests/                 # schema check on every cached company + regressions

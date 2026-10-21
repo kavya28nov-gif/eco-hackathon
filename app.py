@@ -2,6 +2,7 @@
 # Run: streamlit run app.py
 import csv
 import os
+import time
 import traceback
 
 import pandas as pd
@@ -15,6 +16,11 @@ import report
 
 HERE = os.path.dirname(__file__)
 OFFICIAL_DIR = os.path.join(HERE, "data", "official")
+
+# Time budget for one live run (finals: the judges pick a company and wait). Whole run
+# must finish in ~3 minutes, so: own data by 2:00, peers by 2:45, then validation (fast).
+DATA_BUDGET_S = 120
+PEERS_BUDGET_S = 165
 
 RESULT_ICON = {"survived": "✅", "weakened": "⚠️", "fatal": "❌", "not_run": "⏸️"}
 BADGE = {"Strong": "green", "Moderate": "orange", "Weak": "red"}
@@ -41,7 +47,7 @@ def read_csv(path):
         return list(csv.DictReader(f))
 
 
-def load_data(name, offline):
+def load_data(name, offline, deadline=None, progress=None):
     if offline:
         data = research.load_cache(name)
         if data is None:
@@ -51,7 +57,7 @@ def load_data(name, offline):
                                     f"{', '.join(research.cached_tickers()) or 'none'}. "
                                     f"Untick offline mode to fetch it live.")
         return data
-    return research.fetch_company_data(name)
+    return research.fetch_company_data(name, deadline=deadline, progress=progress)
 
 
 def make_llm():
@@ -66,40 +72,49 @@ def make_llm():
 
 if run:
     status = st.status("Running research pipeline...", expanded=True)
+    started = time.time()
+
+    def step(msg):
+        # every progress line carries the elapsed time, so we can see live what is slow
+        status.write(f"[{time.time() - started:4.0f}s] {msg}")
+
     try:
-        status.write("1/4 Collecting public data...")
-        data = load_data(company, use_sample)
+        step("1/4 Collecting public data...")
+        data = load_data(company, use_sample, deadline=started + DATA_BUDGET_S, progress=step)
         ticker = data.get("ticker", "")
-        status.write(f"Got {data.get('record_count', 0)} financial records and "
-                     f"{len(data.get('text_excerpts', []))} text excerpts for {ticker}.")
+        step(f"Got {data.get('record_count', 0)} financial records and "
+             f"{len(data.get('text_excerpts', []))} text excerpts for {ticker}.")
         if data.get("record_count", 0) == 0:
-            status.write("⚠️ No financial records. Check the ticker or tick the offline option.")
+            step("⚠️ No financial records. Check the ticker or tick the offline option.")
 
         official = read_csv(os.path.join(OFFICIAL_DIR, f"{ticker}_evidence.csv"))
         register = read_csv(os.path.join(OFFICIAL_DIR, f"{ticker}_register.csv"))
         if official:
-            status.write(f"Loaded {len(official)} official source-linked figures for cross-checking.")
+            step(f"Loaded {len(official)} official source-linked figures for cross-checking.")
 
         # peers: from the cache when offline, else fetched live (numbers only, in parallel)
         peer_list = data.get("peer_tickers") or research.peers_for(ticker)
-        status.write(f"2/4 Fetching peers for the peer-control check: {', '.join(peer_list) or 'none found'}")
+        step(f"2/4 Fetching peers for the peer-control check: {', '.join(peer_list) or 'none found'}")
         if use_sample:
             peers = {p: research.load_cache(p) for p in peer_list}
             peers = {p: d for p, d in peers.items() if d}
             for p in peer_list:
-                status.write(f"Peer {p}: {'from cache' if p in peers else 'not cached, skipped'}")
+                step(f"Peer {p}: {'from cache' if p in peers else 'not cached, skipped'}")
         else:
-            peers = research.fetch_peers(peer_list, progress=status.write)
+            peers = research.fetch_peers(peer_list, progress=step, deadline=started + PEERS_BUDGET_S)
+        if peer_list and len(peers) < len(peer_list):
+            data.setdefault("data_quality_flags", []).append(
+                f"Peers without data this run: {', '.join(p for p in peer_list if p not in peers)}.")
 
-        status.write("3/4 Calculating metrics...")
+        step("3/4 Calculating metrics...")
         result = analysis.analyze_financials(data)
 
-        status.write("4/4 Forming hypothesis and red-teaming it...")
+        step("4/4 Forming hypothesis and red-teaming it...")
         insight = validation.run_validation(data, official_rows=official, source_register=register,
                                             peer_data=peers or None, llm=make_llm())
 
         st.session_state["run"] = {"data": data, "analysis": result, "insight": insight}
-        status.update(label="Done", state="complete", expanded=False)
+        status.update(label=f"Done in {time.time() - started:.0f}s", state="complete", expanded=False)
     except Exception as e:
         status.update(label="Pipeline failed", state="error")
         st.error(f"{type(e).__name__}: {e}")

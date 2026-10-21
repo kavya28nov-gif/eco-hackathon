@@ -44,6 +44,10 @@ HEADERS = {
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE_DIR = os.path.join(HERE, "data", "cache")
 
+# Demo reliability: no single source may take longer than this. Live at the finals we
+# have ~3 minutes in total, so one slow website must never hang the whole run.
+SOURCE_TIMEOUT_S = 15
+
 # How much history to keep. 12 quarters gives 8 year-on-year points, which is the
 # minimum for the robust z-score in validation.py to mean something (8 quarters
 # only gave 4 points, too thin -- one odd quarter could swing the whole score).
@@ -117,6 +121,15 @@ def resolve_ticker(company_name: str, allow_online: bool = True) -> str:
         found = _search_screener(company_name)
         if found:
             return found
+    # Screener search down (it rate-limited us once)? A name we ran before is in the
+    # cache with its ticker, so "Jubilant Foodworks" still becomes JUBLFOOD.
+    for t in cached_tickers():
+        try:
+            with open(cache_path(t), encoding="utf-8") as f:
+                if json.load(f).get("company", "").lower().strip() == clean:
+                    return t
+        except (OSError, json.JSONDecodeError):
+            continue
     # Otherwise assume the user typed the ticker directly (e.g. "EMAMILTD").
     # Tickers never have spaces, so "HDFC BANK" becomes "HDFCBANK".
     return re.sub(r"\s+", "", company_name.upper())
@@ -366,7 +379,7 @@ def search_public_filings_and_excerpts(company_name: str, ticker: str) -> List[D
     ]
 
     try:
-        with DDGS() as ddgs:
+        with DDGS(timeout=SOURCE_TIMEOUT_S) as ddgs:
             for q in queries:
                 results = list(ddgs.text(q, max_results=3))
                 for r in results:
@@ -498,13 +511,18 @@ def _pick_filings(announcements: List[Dict[str, Any]]) -> List[Dict[str, str]]:
 def _pdf_pages(url: str) -> List[str]:
     """Text of each page. Uses PyMuPDF (fast); pdfplumber was ~10x slower on 6 MB decks."""
     import pymupdf
-    resp = requests.get(url, headers=NSE_HEADERS, timeout=15, stream=True)
+    started = time.time()
+    resp = requests.get(url, headers=NSE_HEADERS, timeout=SOURCE_TIMEOUT_S, stream=True)
     resp.raise_for_status()
     data = b""
     for chunk in resp.iter_content(64 * 1024):
         data += chunk
         if len(data) > MAX_PDF_BYTES:
             raise ValueError(f"PDF larger than {MAX_PDF_BYTES // (1024 * 1024)} MB, skipped")
+        # requests' timeout is per read, so a slow server can drip data for minutes.
+        # This caps the WHOLE download.
+        if time.time() - started > SOURCE_TIMEOUT_S:
+            raise TimeoutError(f"download took more than {SOURCE_TIMEOUT_S}s, skipped")
     with pymupdf.open(stream=data, filetype="pdf") as doc:
         return [doc[i].get_text() for i in range(min(len(doc), MAX_PDF_PAGES))]
 
@@ -572,21 +590,25 @@ def _extract_growth(pages: List[str]) -> Dict[str, Tuple[float, int, str]]:
         for metric, patterns in GROWTH_PATTERNS.items():
             if metric in found:
                 continue
+            # earliest match on the page wins, whichever pattern found it -- trying
+            # patterns one by one was letting a later sentence beat the headline one
+            hits = []
             for pat in patterns:
                 m = re.search(pat, flat, re.I)
-                if not m:
-                    continue
-                value = float(m.groups()[-1])
-                if any(w in m.group(0).lower() for w in DOWN_WORDS):
-                    value = -abs(value)      # "volumes declined by 3%" means -3
-                # the sentence around the match, so the judge can read it in context.
-                # A full stop between two digits is a decimal ("9.5%"), not a sentence end.
-                stops = [s.start() for s in re.finditer(r"(?<!\d)\.|\.(?!\d)", flat)]
-                start = max([s for s in stops if s < m.start()], default=-1) + 1
-                end = min([s for s in stops if s >= m.end()], default=len(flat))
-                sentence = flat[start:end].strip()[:300]
-                found[metric] = (value, page_no, sentence)
-                break
+                if m:
+                    hits.append(m)
+            if not hits:
+                continue
+            m = min(hits, key=lambda h: h.start())
+            value = float(m.groups()[-1])
+            if any(w in m.group(0).lower() for w in DOWN_WORDS):
+                value = -abs(value)      # "volumes declined by 3%" means -3
+            # the sentence around the match, so the judge can read it in context.
+            # A full stop between two digits is a decimal ("9.5%"), not a sentence end.
+            stops = [s.start() for s in re.finditer(r"(?<!\d)\.|\.(?!\d)", flat)]
+            start = max([s for s in stops if s < m.start()], default=-1) + 1
+            end = min([s for s in stops if s >= m.end()], default=len(flat))
+            found[metric] = (value, page_no, flat[start:end].strip()[:300])
     return found
 
 
@@ -663,7 +685,8 @@ def _one_per_quarter(records: List[Dict[str, Any]], flags: List[str]) -> List[Di
 
 
 def fetch_company_data(company_name: str, save_to_cache: bool = True,
-                       include_text: bool = True) -> Dict[str, Any]:
+                       include_text: bool = True, deadline: Optional[float] = None,
+                       progress=None) -> Dict[str, Any]:
     """
     MAIN FUNCTION CALLED BY PERSON 2 AND PERSON 4.
     Accepts any company name (e.g., 'HUL', 'ITC', 'Britannia') and returns
@@ -672,11 +695,21 @@ def fetch_company_data(company_name: str, save_to_cache: bool = True,
     demo mode has a backup for every company we have ever run.
     include_text=False skips searches and PDFs -- used for peers, where we only
     need the numbers, so 5 peers take seconds and not minutes.
+    deadline = time.time() by which we must be done; slower stages are skipped and
+    flagged. progress = function(str) for the app's status box (None = silent).
     """
+    def say(msg):
+        if progress:
+            progress(msg)
+
+    def time_left() -> float:
+        return (deadline - time.time()) if deadline else 1e9
+
     ticker = resolve_ticker(company_name)
     flags: List[str] = []
 
     # 1. Fetch structured multi-year & multi-quarter numbers (+ NSE industry, from the same page)
+    say(f"Screener: annual and quarterly numbers for {ticker}...")
     soup, used_url = _get_screener_page(ticker)
     financial_records = scrape_structured_financials(ticker, soup, used_url)
     industry_info = scrape_industry_info(soup)
@@ -693,15 +726,29 @@ def fetch_company_data(company_name: str, save_to_cache: bool = True,
         flags.append(f"Non-standard periods (year-end change / not 12 months): {', '.join(odd)}. "
                      f"Kept as-is, but not comparable with normal years.")
 
-    # 2. Fetch qualitative excerpts & filing URLs for triangulation
-    text_excerpts = search_public_filings_and_excerpts(company_name, ticker) if include_text else []
+    say(f"Screener: {len(financial_records)} records"
+        + (f", NSE industry: {industry_info.get('industry')}" if industry_info else ""))
+    text_excerpts: List[Dict[str, Any]] = []
 
-    # 3. The company's own filings on NSE: quotes with page numbers (+ volume growth, see P4)
-    if include_text:
-        filing_text, filing_records, filing_flags = fetch_filings(ticker)
+    # 2. The company's own filings on NSE: quotes with page numbers (+ volume growth, see P4).
+    #    This goes BEFORE the web search, because it is worth much more if time runs short.
+    if include_text and financial_records:
+        say("NSE filings: presentation, call transcript, press releases, results...")
+        filing_text, filing_records, filing_flags = fetch_filings(ticker, deadline)
         text_excerpts += filing_text
         financial_records += filing_records
         flags += filing_flags
+        docs = len({x["source_url"] for x in filing_text})
+        say(f"NSE filings: {docs} document(s) read, {len(filing_text)} quotes, "
+            f"{len(filing_records)} volume/sales growth figure(s)")
+
+    # 3. Web search excerpts -- least useful source, so only if we still have time
+    if include_text and financial_records:
+        if time_left() > 25:
+            say("Web search for extra context...")
+            text_excerpts += search_public_filings_and_excerpts(company_name, ticker)
+        else:
+            flags.append("Web search skipped: time budget nearly used up.")
 
     data = {
         "company": company_name,
@@ -734,14 +781,17 @@ def fetch_company_data(company_name: str, save_to_cache: bool = True,
     return data
 
 
-def fetch_peers(tickers: List[str], progress=None) -> Dict[str, Dict[str, Any]]:
+def fetch_peers(tickers: List[str], progress=None, deadline: Optional[float] = None) -> Dict[str, Dict[str, Any]]:
     """Numbers-only fetch for each peer, all at the same time (threads), because
-    one by one 5 peers was taking ~50 seconds. A peer that fails is just skipped."""
-    from concurrent.futures import ThreadPoolExecutor, as_completed
+    one by one 5 peers was taking ~50 seconds. A peer that fails, or is still not
+    back when the deadline comes, is just skipped (and we say which)."""
+    from concurrent.futures import ThreadPoolExecutor, as_completed, TimeoutError as FutureTimeout
     out: Dict[str, Dict[str, Any]] = {}
-    with ThreadPoolExecutor(max_workers=5) as pool:
-        jobs = {pool.submit(fetch_company_data, t, True, False): t for t in tickers}
-        for job in as_completed(jobs):
+    pool = ThreadPoolExecutor(max_workers=5)
+    jobs = {pool.submit(fetch_company_data, t, True, False): t for t in tickers}
+    wait_s = max(1.0, deadline - time.time()) if deadline else None
+    try:
+        for job in as_completed(jobs, timeout=wait_s):
             t = jobs[job]
             try:
                 d = job.result()
@@ -752,6 +802,12 @@ def fetch_peers(tickers: List[str], progress=None) -> Dict[str, Dict[str, Any]]:
                 out[t] = d
             if progress:
                 progress(f"Peer {t}: {'ok' if t in out else 'no data, skipped'}")
+    except FutureTimeout:
+        late = [t for job, t in jobs.items() if not job.done()]
+        if progress:
+            progress(f"Time budget reached; peers skipped: {', '.join(late)}")
+    # do not wait for the slow ones -- the demo must go on
+    pool.shutdown(wait=False, cancel_futures=True)
     return out
 
 

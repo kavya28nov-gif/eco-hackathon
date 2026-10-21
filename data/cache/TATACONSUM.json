@@ -1637,27 +1637,6 @@
  "text_excerpts": [
   {
    "company": "TATACONSUM",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Tata Consumer Products Ltd — Investor''s presentation for Q1 FY 2027 is ...",
-   "excerpt": "Tata Consumer Products Ltd (TATACONSUM) filing on 24 Jul 2026: Investor Presentation - Q1FY27 - Consolidated revenue grew 12% to ₹5,349 Cr; EBITDA up 19% to ₹730 Cr with margin expansion of 70 bps to 13.6% - India business revenue up 13% with 2% volume growth in",
-   "source_url": "https://indianstockalerts.com/news/tataconsum-investor-s-presentation-for-q1-fy-2027-is-enclosed-6757"
-  },
-  {
-   "company": "TATACONSUM",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Results & Presentations - Tata Consumer Products",
-   "excerpt": "Financial Information - Results & Presentations - Investor Presentation Presentation for the Virtual Analysts/Institutional Investor Meeting to be held on June 16 and June 17, 2020",
-   "source_url": "https://www.tataconsumer.com/investors/investor-relations/results-and-presentation/analyst-presentation"
-  },
-  {
-   "company": "TATACONSUM",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Results & Presentations - Tata Consumer Products",
-   "excerpt": "Home Investors Financial Information - Results & Presentations - Consolidated Results",
-   "source_url": "https://www.tataconsumer.com/investors/investor-relations/results-and-presentation/consolidated-results"
-  },
-  {
-   "company": "TATACONSUM",
    "topic": "Earnings call transcript",
    "doc_title": "TATACONSUM Earnings call transcript, filed 28-Jul-2026 (about Q1_FY2027, filing date, confirmed by the document)",
    "excerpt": "So in summary, overall, our consolidated revenue grew 12% with the India business delivering a 13% UVG.",
@@ -3057,7 +3036,7 @@
   "MARICO"
  ],
  "data_quality_flags": [
-  "underlying_volume_growth_pct Q1_FY2027: Press release says 13.0%, Earnings call transcript says 7.0% (kept the press release; the other may be a segment figure)."
+  "underlying_volume_growth_pct Q1_FY2027: Press release says 13.0%, Earnings call transcript says 2.0% (kept the press release; the other may be a segment figure)."
  ],
- "fetched_at": "2026-10-21 09:37"
+ "fetched_at": "2026-10-21 09:50"
 }

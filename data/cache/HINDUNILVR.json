@@ -1652,69 +1652,6 @@
  "text_excerpts": [
   {
    "company": "HINDUNILVR",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Quarterly Results and Webcasts | Unilever - hul.co.in",
-   "excerpt": "Our quarterly results announcements and associated documents are arranged in reverse chronological order for your convenience",
-   "source_url": "https://www.hul.co.in/investors/results-and-presentations/quarterly-results-and-webcasts/"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Results and Presentations | Unilever - hul.co.in",
-   "excerpt": "This page contains Presentations and Quarterly Results of HUL",
-   "source_url": "https://www.hul.co.in/investors/results-and-presentations/"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Hindustan Unilever - Investor Presentations - Trendlyne",
-   "excerpt": "Hindustan Unilever Investor Presentation: Get insights into company performance, financials, capex plans and more",
-   "source_url": "https://trendlyne.com/fundamentals/documents-investor-presentation/560/HINDUNILVR/hindustan-unilever-ltd/"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "MQ'25 and FY'25 Earnings Call - hul.co.in",
-   "excerpt": "Rural demand continued to improve gradually while urban demand moderated over the year. While syndicated data is available only for general and modern trade, we also incorporate e-commerce data from our partners for internal tracking.",
-   "source_url": "https://www.hul.co.in/files/mq25-earnings-call-transcript.pdf"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Hindustan Unilever (NSE:HINDUNILVR) Earnings Call Transcripts",
-   "excerpt": "Jul 28, 2026 · Transcripts for earnings calls and other events for Hindustan Unilever Limited, with audio and supporting slides and documents when applicable.",
-   "source_url": "https://stockanalysis.com/quote/nse/HINDUNILVR/transcripts/"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "HINDUSTAN UNILEVER LTD. (HINDUNILVR.BO) Q4 25/26 earnings ...",
-   "excerpt": "Our investments are not just in quick commerce, which we've invested, but also in general trade. We continue to invest, of course, in modern trade, where we have a strong business.",
-   "source_url": "https://finance.yahoo.com/quote/HINDUNILVR.BO/earnings/HINDUNILVR.BO-Q4-2026-earnings_call-544024.html?fr=sycsrp_catchall"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Annual Reports | Unilever - hul.co.in",
-   "excerpt": "Our archived annual reports are arranged in reverse chronological order for your convenience",
-   "source_url": "https://www.hul.co.in/investors/annual-reports-and-performance-highlights/annual-reports/"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Annual Report - Archives | Unilever - hul.co.in",
-   "excerpt": "May 21, 2024 · Our archived annual reports are arranged in reverse chronological order for your convenience.",
-   "source_url": "https://www.hul.co.in/investors/annual-reports-and-performance-highlights/annual-reports/annual-report-archives/"
-  },
-  {
-   "company": "HINDUNILVR",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Hindustan Unilever Ltd. - Annual Report 2026 | FinancialFilings",
-   "excerpt": "Jun 2, 2026 · Access the 2026 Annual Report content for Hindustan Unilever Ltd.. View the original document or AI-processed analysis.",
-   "source_url": "https://financialfilings.com/filings/hindustan-unilever-ltd/annual-report/2026/47936615/"
-  },
-  {
-   "company": "HINDUNILVR",
    "topic": "Investor presentation",
    "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
    "excerpt": "Hindustan Unilever: Delivering volume-led profit growth Step–up growth led capex investments from 2% to 3% of Turnover and deploy capital on bolt-on acquisitions Generate Fuel for Growth Volume-led profit growth Competitive volume-led revenue growth 500 bps Deploy Fuel for Growth 500 bps Medium-term EBITDA Margin range 22% - 24%",
@@ -2163,6 +2100,27 @@
    "period": "Q4_FY2026",
    "period_basis": "filing date, confirmed by the document",
    "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Quarterly Results and Webcasts | Unilever - hul.co.in",
+   "excerpt": "Our quarterly results announcements and associated documents are arranged in reverse chronological order for your convenience",
+   "source_url": "https://www.hul.co.in/investors/results-and-presentations/quarterly-results-and-webcasts/"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Results and Presentations | Unilever - hul.co.in",
+   "excerpt": "This page contains Presentations and Quarterly Results of HUL",
+   "source_url": "https://www.hul.co.in/investors/results-and-presentations/"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Hindustan Unilever - Investor Presentations - Trendlyne",
+   "excerpt": "Hindustan Unilever Investor Presentation: Get insights into company performance, financials, capex plans and more",
+   "source_url": "https://trendlyne.com/fundamentals/documents-investor-presentation/560/HINDUNILVR/hindustan-unilever-ltd/"
   }
  ],
  "industry_info": {
@@ -2182,5 +2140,5 @@
  "data_quality_flags": [
   "Results filing (30-Apr-2026) not read: ValueError: PDF larger than 20 MB, skipped."
  ],
- "fetched_at": "2026-10-21 09:35"
+ "fetched_at": "2026-10-21 09:49"
 }

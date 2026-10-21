@@ -1592,27 +1592,6 @@
  "text_excerpts": [
   {
    "company": "TITAN",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Quarterly Results & Reports | Titan Company",
-   "excerpt": "Browse and download Titan Company's quarterly results, showcasing its financial performance and strategic initiatives for growth.",
-   "source_url": "https://www.titancompany.in/investors/investor-relations/quarterly-results"
-  },
-  {
-   "company": "TITAN",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Investor Day - Titan Company",
-   "excerpt": "Quarterly Results Annual Reports Subsidiaries Investor Day Corporate Announcements Other Updates Stock Information Presentations at Investor Conferences Contact Us",
-   "source_url": "https://www.titancompany.in/investors/investor-day"
-  },
-  {
-   "company": "TITAN",
-   "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Titan Company Ltd. Investor Presentation - Trendlyne",
-   "excerpt": "Titan Company Ltd. Investor Presentation: Get insights into company performance, financials, capex plans and more",
-   "source_url": "https://trendlyne.com/investor-presentations/1403/TITAN/titan-company-ltd/"
-  },
-  {
-   "company": "TITAN",
    "topic": "Press release",
    "doc_title": "TITAN Press release, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
    "excerpt": "LAN / Name of Borrower / Co-Borrower / Guarantor Date of Demand notice Total O/s Amount (Rs.) Future Interest Applicable Date of Possession MUTHOOT HOUSING FINANCE COMPANY LIMITED 1 LAN No.",
@@ -2463,5 +2442,5 @@
  "data_quality_flags": [
   "Results filing (07-Aug-2026) not read: ValueError: PDF larger than 20 MB, skipped."
  ],
- "fetched_at": "2026-10-21 09:39"
+ "fetched_at": "2026-10-21 09:51"
 }
