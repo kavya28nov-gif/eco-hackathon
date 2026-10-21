@@ -384,6 +384,284 @@ def search_public_filings_and_excerpts(company_name: str, ticker: str) -> List[D
     return excerpts
 
 
+# ---------------------------------------------------------------------------
+# 3. Company filings on NSE -- earnings-call transcripts, investor presentations,
+#    results press releases. Real PDFs, so every quote has a page number.
+# ---------------------------------------------------------------------------
+
+NSE_ANNOUNCEMENTS = "https://www.nseindia.com/api/corporate-announcements?index=equities&symbol={}"
+NSE_HEADERS = {**HEADERS, "Referer": "https://www.nseindia.com/"}
+MAX_PDF_BYTES = 20 * 1024 * 1024   # a 100 MB annual report would eat the whole time budget
+MAX_PDF_PAGES = 60
+PRESS_RELEASES_TO_READ = 4         # small files (~150 KB); 4 quarters gives some history
+RESULTS_FILINGS_TO_READ = 4        # many companies (HUL also) put the results release only inside these
+MAX_FILING_AGE_DAYS = 400          # ~5 quarters. ITC's feed was giving 2018 press releases otherwise
+QUOTES_PER_DOC = 15
+
+# sentences we never want as "evidence" -- legal boilerplate present in every filing
+BOILERPLATE = ("regulation 30", "sebi (listing", "listing obligations", "safe harbour", "forward-looking",
+               "forward looking", "kindly take", "request you to", "company secretary", "this is to inform")
+FACT_WORDS = ("growth", "grew", "volume", "price", "margin", "revenue", "sales", "turnover", "profit",
+              "ebitda", "demand", "rural", "urban", "commerce", "inflation", "input cost", "inventory",
+              "receivable", "distribution", "market share", "pricing")
+
+MONTH_TO_QUARTER = {"june": 1, "september": 2, "december": 3, "march": 4}
+
+
+def _quarter_label(month_name: str, year: int) -> str:
+    """'June', 2026 -> 'Q1_FY2027' (Indian FY: April-March, so June 2026 is FY2027)."""
+    q = MONTH_TO_QUARTER[month_name.lower()]
+    return f"Q{q}_FY{year + 1 if q < 4 else year}"
+
+
+def _period_from_text(text: str) -> Optional[str]:
+    """The quarter a document talks about, read from its own words. None if it never says.
+    Handles 'quarter ended 30th June, 2026', 'June quarter 2026', 'Q1 FY27', 'Q4 25-26'."""
+    m = re.search(r"quarter\s+(?:and\s+\w+\s+year\s+)?ended\s+(?:on\s+)?\d{1,2}(?:st|nd|rd|th)?\s+"
+                  r"(june|september|december|march),?\s+(\d{4})", text, re.I)
+    if m:
+        return _quarter_label(m.group(1), int(m.group(2)))
+    m = re.search(r"(june|september|december|march)\s+quarter,?\s+(\d{4})", text, re.I)
+    if m:
+        return _quarter_label(m.group(1), int(m.group(2)))
+    m = re.search(r"\bQ([1-4])\s*[_\s']?\s*FY\s*'?(\d{2,4})\b", text, re.I)
+    if m:
+        y = int(m.group(2))
+        return f"Q{m.group(1)}_FY{y + 2000 if y < 100 else y}"
+    m = re.search(r"\bQ([1-4])[_\s]+(\d{2})-(\d{2})\b", text)   # Britannia style 'Q4_25-26'
+    if m:
+        return f"Q{m.group(1)}_FY{2000 + int(m.group(3))}"
+    return None
+
+
+def _period_from_filing_date(an_dt: str) -> Optional[str]:
+    """Fallback: results come out 2-8 weeks after quarter end, so the quarter is the last
+    one that ended at least a week before the filing date. Only used if the text is silent."""
+    import datetime
+    try:
+        filed = datetime.datetime.strptime(an_dt.split()[0], "%d-%b-%Y").date()
+    except ValueError:
+        return None
+    cutoff = filed - datetime.timedelta(days=7)
+    # walk back month by month until we hit a quarter-end month that is fully over
+    year, month = cutoff.year, cutoff.month
+    while True:
+        month -= 1
+        if month == 0:
+            year, month = year - 1, 12
+        if month in (3, 6, 9, 12):
+            name = {3: "march", 6: "june", 9: "september", 12: "december"}[month]
+            return _quarter_label(name, year)
+
+
+def _nse_announcements(ticker: str) -> List[Dict[str, Any]]:
+    resp = requests.get(NSE_ANNOUNCEMENTS.format(ticker), headers=NSE_HEADERS, timeout=15)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def _pick_filings(announcements: List[Dict[str, Any]]) -> List[Dict[str, str]]:
+    """Latest investor presentation, latest call transcript, and the last few press releases.
+    NSE's own category names are the same for every company, so this is generic.
+    Announcements come newest first."""
+    import datetime
+    oldest = datetime.date.today() - datetime.timedelta(days=MAX_FILING_AGE_DAYS)
+    picked: List[Dict[str, str]] = []
+    have_ppt = have_transcript = False
+    press = results = 0
+    for a in announcements:
+        url, desc = a.get("attchmntFile") or "", a.get("desc") or ""
+        text = a.get("attchmntText") or ""
+        if not url.lower().endswith(".pdf"):
+            continue
+        try:
+            filed = datetime.datetime.strptime((a.get("an_dt") or "").split()[0], "%d-%b-%Y").date()
+        except (ValueError, IndexError):
+            continue
+        if filed < oldest:
+            continue
+        kind = None
+        if desc == "Investor Presentation" and not have_ppt:
+            kind, have_ppt = "Investor presentation", True
+        elif "transcript" in (text + url).lower() and not have_transcript:
+            kind, have_transcript = "Earnings call transcript", True
+        elif desc == "Press Release" and press < PRESS_RELEASES_TO_READ:
+            kind, press = "Press release", press + 1
+        elif (desc in ("Outcome of Board Meeting", "Financial Result Updates")
+              and "financial result" in text.lower() and results < RESULTS_FILINGS_TO_READ):
+            kind, results = "Results filing", results + 1
+        if kind:
+            picked.append({"kind": kind, "url": url, "date": a.get("an_dt", ""), "nse_text": text})
+    return picked
+
+
+def _pdf_pages(url: str) -> List[str]:
+    """Text of each page. Uses PyMuPDF (fast); pdfplumber was ~10x slower on 6 MB decks."""
+    import pymupdf
+    resp = requests.get(url, headers=NSE_HEADERS, timeout=15, stream=True)
+    resp.raise_for_status()
+    data = b""
+    for chunk in resp.iter_content(64 * 1024):
+        data += chunk
+        if len(data) > MAX_PDF_BYTES:
+            raise ValueError(f"PDF larger than {MAX_PDF_BYTES // (1024 * 1024)} MB, skipped")
+    with pymupdf.open(stream=data, filetype="pdf") as doc:
+        return [doc[i].get_text() for i in range(min(len(doc), MAX_PDF_PAGES))]
+
+
+def _fact_sentences(pages: List[str]) -> List[Tuple[int, str]]:
+    """(page number, sentence) for sentences that actually state a fact: a number plus a
+    business word, and not legal boilerplate. This is what fixes the 'search excerpts
+    describe a web page, not a fact' problem."""
+    out = []
+    for page_no, text in enumerate(pages, 1):
+        flat = re.sub(r"\s+", " ", text)
+        for s in re.split(r"(?<=[.!?])\s+|\s•\s|\s▪\s", flat):
+            s = s.strip(" -–•")
+            low = s.lower()
+            if not 50 <= len(s) <= 350:
+                continue
+            if not re.search(r"\d", s) or not any(w in low for w in FACT_WORDS):
+                continue
+            if any(b in low for b in BOILERPLATE):
+                continue
+            # slide decks give text like "V A L U E C R E A T I O N" -- if many words are
+            # single letters, it is a broken heading, not a sentence
+            words = s.split()
+            if sum(len(w) == 1 for w in words) > 0.3 * len(words):
+                continue
+            out.append((page_no, s))
+    # sentences with a % first -- they are the most quotable
+    out.sort(key=lambda ps: (0 if "%" in ps[1] else 1, ps[0]))
+    return out
+
+
+# ---------------------------------------------------------------------------
+# 4. Volume vs price -- underlying volume growth (UVG) and underlying sales growth (USG),
+#    in each company's own wording. Pulled from the same filing pages as the quotes.
+# ---------------------------------------------------------------------------
+
+NUM = r"(-?\d{1,2}(?:\.\d+)?)"
+APPROX = r"(?:about|around|approximately|roughly|nearly|~)?\s*"
+GROWTH_PATTERNS = {
+    # metric name is the same one validation.py already maps HUL's official CSV to
+    "underlying_volume_growth_pct": [
+        rf"{NUM}\s*%\s*(?:underlying\s+)?volume\s+growth",                       # "6% Underlying Volume Growth"
+        rf"(?:underlying\s+)?volume\s+growth\s*(?:\(uvg\))?\s*(?:of|at|was|stood at|:)?\s*{APPROX}{NUM}\s*%",
+        rf"\buvg\s*(?:of|at|was|:)?\s*{APPROX}{NUM}\s*%",
+        rf"volumes?\s+(grew|increased|rose|declined|fell|were up|were down)\s+(?:by\s+)?{APPROX}{NUM}\s*%",
+    ],
+    "underlying_sales_growth_pct": [
+        rf"{NUM}\s*%\s*underlying\s+sales\s+growth",
+        rf"underlying\s+sales\s+growth\s*(?:\(usg\))?\s*(?:of|at|was|stood at|:)?\s*{APPROX}{NUM}\s*%",
+        rf"\busg\s*(?:of|at|was|:)?\s*{APPROX}{NUM}\s*%",
+    ],
+}
+DOWN_WORDS = ("declined", "fell", "were down")
+# which document to believe first when two of them give a number for the same quarter
+DOC_PRIORITY = ["Press release", "Results filing", "Investor presentation", "Earnings call transcript"]
+FILING_METRICS = tuple(GROWTH_PATTERNS)
+
+
+def _extract_growth(pages: List[str]) -> Dict[str, Tuple[float, int, str]]:
+    """{metric: (value, page, sentence)} -- the FIRST match in the document, because the
+    headline number comes early (page 1-3); later pages are mostly segment numbers."""
+    found: Dict[str, Tuple[float, int, str]] = {}
+    for page_no, text in enumerate(pages, 1):
+        flat = re.sub(r"\s+", " ", text)
+        for metric, patterns in GROWTH_PATTERNS.items():
+            if metric in found:
+                continue
+            for pat in patterns:
+                m = re.search(pat, flat, re.I)
+                if not m:
+                    continue
+                value = float(m.groups()[-1])
+                if any(w in m.group(0).lower() for w in DOWN_WORDS):
+                    value = -abs(value)      # "volumes declined by 3%" means -3
+                # the sentence around the match, so the judge can read it in context.
+                # A full stop between two digits is a decimal ("9.5%"), not a sentence end.
+                stops = [s.start() for s in re.finditer(r"(?<!\d)\.|\.(?!\d)", flat)]
+                start = max([s for s in stops if s < m.start()], default=-1) + 1
+                end = min([s for s in stops if s >= m.end()], default=len(flat))
+                sentence = flat[start:end].strip()[:300]
+                found[metric] = (value, page_no, sentence)
+                break
+    return found
+
+
+def fetch_filings(ticker: str, deadline: Optional[float] = None) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[str]]:
+    """Downloads the chosen NSE filings (in parallel) and returns
+    (text_excerpts with quote + page, extra financial_records, data_quality_flags).
+    Any one PDF failing is fine -- we keep the rest and say what failed."""
+    from concurrent.futures import ThreadPoolExecutor
+    excerpts: List[Dict[str, Any]] = []
+    records: List[Dict[str, Any]] = []
+    flags: List[str] = []
+    try:
+        filings = _pick_filings(_nse_announcements(ticker))
+    except Exception as e:
+        return excerpts, records, [f"NSE filings not reachable for {ticker} ({type(e).__name__}); "
+                                   f"no transcript/presentation quotes this run."]
+    if not filings:
+        return excerpts, records, [f"No presentation, transcript or press release found on NSE for {ticker}."]
+
+    def read(f):
+        if deadline and time.time() > deadline:
+            return f, None, "skipped, time budget used up"
+        try:
+            return f, _pdf_pages(f["url"]), None
+        except Exception as e:
+            return f, None, f"{type(e).__name__}: {str(e)[:80]}"
+
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        results = list(pool.map(read, filings))
+
+    for f, pages, err in results:
+        if err:
+            flags.append(f"{f['kind']} ({f['date'].split()[0]}) not read: {err}.")
+            continue
+        # Which quarter is this document about? The filing date decides (results docs come
+        # out within ~8 weeks of quarter end). The document's own words only CONFIRM it:
+        # a transcript often mentions last year's quarter first, and reading that blindly
+        # was labelling Dabur's Aug-2026 call as Q1 FY2026.
+        period = _period_from_filing_date(f["date"])
+        said = _period_from_text(f["nse_text"] + " " + " ".join(pages[:2]))
+        if said == period:
+            basis = "filing date, confirmed by the document"
+        elif said:
+            basis = f"filing date; document also mentions {said}"
+        else:
+            basis = "filing date"
+        title = f"{ticker} {f['kind']}, filed {f['date'].split()[0]} (about {period}, {basis})"
+        for page_no, sentence in _fact_sentences(pages)[:QUOTES_PER_DOC]:
+            excerpts.append({"company": ticker, "topic": f["kind"], "doc_title": title,
+                             "excerpt": sentence, "source_url": f["url"], "page": page_no,
+                             "period": period, "period_basis": basis, "kind": "filing_pdf"})
+        for metric, (value, page_no, sentence) in _extract_growth(pages).items():
+            records.append({"company": ticker, "metric": metric, "value": value, "unit": "percentage",
+                            "period": period, "period_type": "quarterly", "period_months": 3,
+                            "doc_title": title, "source_url": f["url"], "quote": sentence,
+                            "page": page_no, "period_basis": basis, "doc_kind": f["kind"]})
+    return excerpts, _one_per_quarter(records, flags), flags
+
+
+def _one_per_quarter(records: List[Dict[str, Any]], flags: List[str]) -> List[Dict[str, Any]]:
+    """Keep ONE volume / sales growth number per quarter, from the most trusted document
+    kind (DOC_PRIORITY). If another document gives a different number, we say so --
+    usually it is a segment number from the call, but the judge should know."""
+    best: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    for r in sorted(records, key=lambda r: DOC_PRIORITY.index(r["doc_kind"])):
+        key = (r["metric"], r["period"])
+        if key not in best:
+            best[key] = r
+        elif abs(best[key]["value"] - r["value"]) > 0.5:
+            flags.append(f"{r['metric']} {r['period']}: {best[key]['doc_kind']} says {best[key]['value']}%, "
+                         f"{r['doc_kind']} says {r['value']}% (kept the {best[key]['doc_kind'].lower()}; "
+                         f"the other may be a segment figure).")
+    return list(best.values())
+
+
 def fetch_company_data(company_name: str, save_to_cache: bool = True,
                        include_text: bool = True) -> Dict[str, Any]:
     """
@@ -418,6 +696,13 @@ def fetch_company_data(company_name: str, save_to_cache: bool = True,
     # 2. Fetch qualitative excerpts & filing URLs for triangulation
     text_excerpts = search_public_filings_and_excerpts(company_name, ticker) if include_text else []
 
+    # 3. The company's own filings on NSE: quotes with page numbers (+ volume growth, see P4)
+    if include_text:
+        filing_text, filing_records, filing_flags = fetch_filings(ticker)
+        text_excerpts += filing_text
+        financial_records += filing_records
+        flags += filing_flags
+
     data = {
         "company": company_name,
         "ticker": ticker,
@@ -440,6 +725,11 @@ def fetch_company_data(company_name: str, save_to_cache: bool = True,
                 old = json.load(f)
             data["text_excerpts"] = old.get("text_excerpts", [])
             data["company"] = old.get("company", data["company"])   # keep "HUL", not "HINDUNILVR"
+            # also keep volume / sales growth read from its filings -- peers need them
+            # for the price-vs-volume peer check, and a light fetch does not read PDFs
+            data["financial_records"] += [r for r in old.get("financial_records", [])
+                                          if r["metric"] in FILING_METRICS]
+            data["record_count"] = len(data["financial_records"])
         save_cache(data)
     return data
 

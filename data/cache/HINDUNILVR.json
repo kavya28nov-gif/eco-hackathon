@@ -2,7 +2,7 @@
  "company": "HUL",
  "ticker": "HINDUNILVR",
  "sector": "Track C - Consumer, FMCG & Retail",
- "record_count": 144,
+ "record_count": 148,
  "financial_records": [
   {
    "company": "HINDUNILVR",
@@ -1587,6 +1587,66 @@
    "period_months": 12,
    "doc_title": "HINDUNILVR Working Capital & Operational Ratios (FY2026)",
    "source_url": "https://www.screener.in/company/HINDUNILVR/consolidated/"
+  },
+  {
+   "company": "HINDUNILVR",
+   "metric": "underlying_volume_growth_pct",
+   "value": 6.0,
+   "unit": "percentage",
+   "period": "Q4_FY2026",
+   "period_type": "quarterly",
+   "period_months": 3,
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "quote": "16,207 crores, consolidated Revenue grew 8% year-on-year • Delivered 7% Underlying Sales Growth (USG)1, driven by 6% Underlying Volume Growth (UVG)2 • This marks our highest growth in 12 quarters • At 23.7%, EBITDA Margin improved sequentially by 40 bps; absolute EBITDA at Rs",
+   "page": 2,
+   "period_basis": "filing date, confirmed by the document",
+   "doc_kind": "Press release"
+  },
+  {
+   "company": "HINDUNILVR",
+   "metric": "underlying_sales_growth_pct",
+   "value": 7.0,
+   "unit": "percentage",
+   "period": "Q4_FY2026",
+   "period_type": "quarterly",
+   "period_months": 3,
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "quote": "16,207 crores, consolidated Revenue grew 8% year-on-year • Delivered 7% Underlying Sales Growth (USG)1, driven by 6% Underlying Volume Growth (UVG)2 • This marks our highest growth in 12 quarters • At 23.7%, EBITDA Margin improved sequentially by 40 bps; absolute EBITDA at Rs",
+   "page": 2,
+   "period_basis": "filing date, confirmed by the document",
+   "doc_kind": "Press release"
+  },
+  {
+   "company": "HINDUNILVR",
+   "metric": "underlying_sales_growth_pct",
+   "value": 10.0,
+   "unit": "percentage",
+   "period": "Q1_FY2027",
+   "period_type": "quarterly",
+   "period_months": 3,
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "quote": "Turnover for the quarter stood at INR17,184 crores, with an Underlying Sales Growth of 10%, driven equally by volume and price",
+   "page": 4,
+   "period_basis": "filing date, confirmed by the document",
+   "doc_kind": "Earnings call transcript"
+  },
+  {
+   "company": "HINDUNILVR",
+   "metric": "underlying_volume_growth_pct",
+   "value": 5.0,
+   "unit": "percentage",
+   "period": "Q1_FY2027",
+   "period_type": "quarterly",
+   "period_months": 3,
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "quote": "As Priya mentioned earlier, we delivered a strong performance with a revenue growth of 10%, underpinned by UVG of 5%",
+   "page": 6,
+   "period_basis": "filing date, confirmed by the document",
+   "doc_kind": "Earnings call transcript"
   }
  ],
  "text_excerpts": [
@@ -1610,6 +1670,499 @@
    "doc_title": "Hindustan Unilever - Investor Presentations - Trendlyne",
    "excerpt": "Hindustan Unilever Investor Presentation: Get insights into company performance, financials, capex plans and more",
    "source_url": "https://trendlyne.com/fundamentals/documents-investor-presentation/560/HINDUNILVR/hindustan-unilever-ltd/"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "MQ'25 and FY'25 Earnings Call - hul.co.in",
+   "excerpt": "Rural demand continued to improve gradually while urban demand moderated over the year. While syndicated data is available only for general and modern trade, we also incorporate e-commerce data from our partners for internal tracking.",
+   "source_url": "https://www.hul.co.in/files/mq25-earnings-call-transcript.pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Hindustan Unilever (NSE:HINDUNILVR) Earnings Call Transcripts",
+   "excerpt": "Jul 28, 2026 · Transcripts for earnings calls and other events for Hindustan Unilever Limited, with audio and supporting slides and documents when applicable.",
+   "source_url": "https://stockanalysis.com/quote/nse/HINDUNILVR/transcripts/"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "HINDUSTAN UNILEVER LTD. (HINDUNILVR.BO) Q4 25/26 earnings ...",
+   "excerpt": "Our investments are not just in quick commerce, which we've invested, but also in general trade. We continue to invest, of course, in modern trade, where we have a strong business.",
+   "source_url": "https://finance.yahoo.com/quote/HINDUNILVR.BO/earnings/HINDUNILVR.BO-Q4-2026-earnings_call-544024.html?fr=sycsrp_catchall"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Annual Reports | Unilever - hul.co.in",
+   "excerpt": "Our archived annual reports are arranged in reverse chronological order for your convenience",
+   "source_url": "https://www.hul.co.in/investors/annual-reports-and-performance-highlights/annual-reports/"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Annual Report - Archives | Unilever - hul.co.in",
+   "excerpt": "May 21, 2024 · Our archived annual reports are arranged in reverse chronological order for your convenience.",
+   "source_url": "https://www.hul.co.in/investors/annual-reports-and-performance-highlights/annual-reports/annual-report-archives/"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Hindustan Unilever Ltd. - Annual Report 2026 | FinancialFilings",
+   "excerpt": "Jun 2, 2026 · Access the 2026 Annual Report content for Hindustan Unilever Ltd.. View the original document or AI-processed analysis.",
+   "source_url": "https://financialfilings.com/filings/hindustan-unilever-ltd/annual-report/2026/47936615/"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Hindustan Unilever: Delivering volume-led profit growth Step–up growth led capex investments from 2% to 3% of Turnover and deploy capital on bolt-on acquisitions Generate Fuel for Growth Volume-led profit growth Competitive volume-led revenue growth 500 bps Deploy Fuel for Growth 500 bps Medium-term EBITDA Margin range 22% - 24%",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 37,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Annual Turnover & EBITDA Margin for Financial Year 2025-26; Conversions based on a constant exchange rate of ₹97.6/€; Market Capitalisation as on closing for 4th Sept 2026 (NSE)",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 4,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "HUL has delivered a decade of value creation Consistent, volume-led growth Turnover 2X Industry-leading profitability 3X Sustained cash generation Operating cash flow 4X FY'15 FY'25 FY'15 FY'25 EBITDA FY'15 FY'25 All reported figures include Ice Cream business for full reporting period Figures for Financial Year i.e.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 5,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Growth opportunities in New India are emerging in multiple segments Newer geographies Newer consumer spaces Newer channels Newer media platforms Small towns growing at 2X vs All India India growing at 2.5X vs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 9,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Big cities Small towns Tier 4 + Rural Four key strategies to unlock growth POWER SPENDERS PREMIUMISERS DEMOCRATISERS Online MT GT Online Large GT Small GT MT GT CONSUMPTION (MORE USAGE) Using more shampoo PREMIUMISATION (MORE BENEFITS) Using more premium shampoos Shampoo bottles Upgrading to Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 11,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Big cities Small towns Tier 4 + Rural Our portfolio is uniquely positioned to win across these cells POWER SPENDERS PREMIUMISERS DEMOCRATISERS Online MT GT Online Large GT Small GT MT GT Indonesia HHI France HHI Parts of Africa HHI 11 HHI: Household Disposable Income",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 12,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Driving Consumption is a key source of category growth Soaps Laundry Tea 1.3X 1.2X 1.5X X X X Value Seeker Affluent Shampoo 1.7X X Unilever’s leadership & reach gives us an unparalleled advantage 4X 2.5X Market Share vs nearest competitor 1.2X 3.5X 15 Avg consumption Source: Numerator, May’25-Apr’26, Nielsen MAT Jul’26",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 16,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Unilever brands are most loved #1 brand power in Premium Unilever’s portfolio is structurally advantaged to capture Premium growth Our Market Share improves from Mass to Premium Premium (1.3X) Mass (X) 19 Brand Power Rank among Premium Brands Source: BGS Track, MAT Q2’26; Nielsen MAT May'26",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 20,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Premiumising soap bars with Dove & Pears x Mass bars market growth Unilever outpacing Premium market growth 2x Source: Nielsen; Market growth is MAT 20 vs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 21,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "21 2015 2021 2025 Dove Masterbrand Turnover 21 Dove is one of our fastest growing premium brands with huge headroom to grow Calendar year turnover 21",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 22,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Right to Win | Profit Pool | Sustainable Growth Unilever is decisively entering select high growth spaces Masstige Deodorant Protein Ready-to-drink 33",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 34,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Investor presentation",
+   "doc_title": "HINDUNILVR Investor presentation, filed 09-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "FY 22 FY 23 FY 24 FY 25 FY 26 2X Maintaining brand ethos Unlocking synergies Launching blockbuster innovations Building Masstige Skin Care | Fastest brand to €100M Annualised Run Rate in Turnover, c.€100m based on H1 2026 revenue; 2X is since acquisition.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09092026181504_SEIntimationInvestorPresentation09092026Signed.pdf",
+   "page": 35,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Turnover for the quarter stood at INR17,184 crores, with an Underlying Sales Growth of 10%, driven equally by volume and price.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 4,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Our growth trajectory has strengthened from 3% in the first half of FY’26 to 10% in this quarter.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 4,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "As Priya mentioned earlier, we delivered a strong performance with a revenue growth of 10%, underpinned by UVG of 5%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "We navigated external volatility through financial discipline across all the lines of P&L, delivering EBITDA Margin of 23%, which was within the guided range.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Absolute EBITDA grew 8% year-on-year to INR3,947 crores, while Profit After Tax before exceptional items grew 9% year-on-year to INR2,731 crores.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "June Quarter 2026 Earnings call of Hindustan Unilever Limited Page 6 of 25 The reported Profit After Tax after exceptional items stood at INR2,680 crores, declining 2% year-on-year due to one-off tax credit of ~INR330 crores in the base period of June quarter'25.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 7,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Adjusted for this, the Profit After Tax stands at 11% growth year-on-year basis.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 7,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "The segment delivered 4% USG for the quarter, driven by price increases taken in response to continued palm oil inflation for the second consecutive year.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 8,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "You had indicated that cost inflation was closer to 10%, pricing inflation is closer to 5%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 12,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "The first is, if I look at our Q1 volume growth of 5% versus, say, 6% in Q4, fair to say that it's mainly the moderation in tea volumes and soaps, which sort of explains this deceleration, right?",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 15,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Looking at FY26, the performance was very strong at, I think, at an 80% kind of growth the first full year when you were operating it.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 16,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "As far as our growth is concerned, our growth has been very strong double-digit, 40%, 50% kind of growth that we are growing in Q-com.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 19,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "So, there is a 4% sales growth, and the volume decline is sort of a low-single digit kind of a volume decline, which means that the effective pricing is a single-digit pricing growth on a Y-o-Y basis.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 19,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "June Quarter 2026 Earnings call of Hindustan Unilever Limited Page 19 of 25 Now given that the GST rate cuts have happened from 18% to a 5%, at a consumer price level, the Y-o-Y sort of pricing would still be flat to marginally negative only, even though at a net sales level, you are seeing a high single-digit kind of a pricing.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 20,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Earnings call transcript",
+   "doc_title": "HINDUNILVR Earnings call transcript, filed 04-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "And lastly on margins, at what level does crude need to maintain if you had to, let's say, maintain margins at 23% without taking any further price increases?",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_04082026171319_SEIntimationTranscriptofEarningsCallSigned.pdf",
+   "page": 22,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "16,207 crores, consolidated Revenue grew 8% year-on-year",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Delivered 7% Underlying Sales Growth (USG)1, driven by 6% Underlying Volume Growth (UVG)2",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "At 23.7%, EBITDA Margin improved sequentially by 40 bps; absolute EBITDA at Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "3,002 crores grew by 20% year-on-year, including proceeds from the divestment of stake in Nutritionalab Pvt.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Home Care: Delivered 9% competitive growth, led by high-single digit UVG Home Care grew 9%, marking its highest growth in 11 quarters.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Personal Care: Reported 5% USG, led by high-single digit growth in Skin Cleansing Personal Care grew 5%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "EBITDA margin at 23.6% was at the higher end of our guidance.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "These initiatives resulted in consistent improvement in performance through the year with 8% Revenue Growth and 7% Underlying Sales Growth in the March quarter, translating into 5% Underlying Sales Growth for the financial year.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "All reported figures exclude Ice Cream results for the full reporting period Sensitivity: Public MQ’26: Revenue Growth 8%, Underlying Volume Growth 6%, EBITDA Growth 6%",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "1,000 crore annual turnover milestone, taking HUL’s total number of brands above Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Priya Nair, CEO and Managing Director, commented: “Financial Year 2026 witnessed an improved demand environment driven by supportive macro-economic policies.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "We are focussed on strengthening our consumer franchise while delivering sustainable and competitive growth.” 1.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Underlying Sales Growth (USG) refers to the increase in turnover for the period, excluding any change in turnover resulting from acquisitions and disposals 2.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "HINDUNILVR",
+   "topic": "Press release",
+   "doc_title": "HINDUNILVR Press release, filed 30-Apr-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Underlying Volume Growth (UVG) refers to volume growth including the impact of mix of turnover realisation of products sold 3.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_30042026105813_SEIntimationPressRelease30042026signed.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
   }
  ],
  "industry_info": {
@@ -1626,6 +2179,8 @@
   "GODREJCP",
   "COLPAL"
  ],
- "data_quality_flags": [],
- "fetched_at": "2026-10-21 00:00"
+ "data_quality_flags": [
+  "Results filing (30-Apr-2026) not read: ValueError: PDF larger than 20 MB, skipped."
+ ],
+ "fetched_at": "2026-10-21 09:35"
 }

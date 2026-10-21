@@ -2,7 +2,7 @@
  "company": "Dabur",
  "ticker": "DABUR",
  "sector": "Track C - Consumer, FMCG & Retail",
- "record_count": 144,
+ "record_count": 146,
  "financial_records": [
   {
    "company": "DABUR",
@@ -1587,6 +1587,36 @@
    "period_months": 12,
    "doc_title": "DABUR Working Capital & Operational Ratios (FY2026)",
    "source_url": "https://www.screener.in/company/DABUR/consolidated/"
+  },
+  {
+   "company": "DABUR",
+   "metric": "underlying_volume_growth_pct",
+   "value": 5.0,
+   "unit": "percentage",
+   "period": "Q1_FY2027",
+   "period_type": "quarterly",
+   "period_months": 3,
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "quote": "India FMCG business reported 9.5% growth with an underlying Volume growth of 5%",
+   "page": 2,
+   "period_basis": "filing date",
+   "doc_kind": "Press release"
+  },
+  {
+   "company": "DABUR",
+   "metric": "underlying_volume_growth_pct",
+   "value": 6.0,
+   "unit": "percentage",
+   "period": "Q4_FY2026",
+   "period_type": "quarterly",
+   "period_months": 3,
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "quote": "\" India FMCG Business Operating Profit rose 12.5% during the quarter, reflecting strong execution in the domestic FMCG business and healthy underlying volume growth of 6%",
+   "page": 2,
+   "period_basis": "filing date",
+   "doc_kind": "Press release"
   }
  ],
  "text_excerpts": [
@@ -1601,15 +1631,15 @@
    "company": "DABUR",
    "topic": "investor presentation underlying volume growth price quarterly results",
    "doc_title": "Investor Overview | Results | Dabur",
-   "excerpt": "Get access to Dabur’s quarterly reports, Select the term and quarter to download all the reports and performance documents",
+   "excerpt": "Get access to Dabur’s quarterly reports, Select the term and quarter to download all the reports and performance documents.",
    "source_url": "https://www.dabur.com/investor/financial-information/results"
   },
   {
    "company": "DABUR",
    "topic": "investor presentation underlying volume growth price quarterly results",
-   "doc_title": "Dabur - Investor Presentations - Trendlyne",
-   "excerpt": "Jul 29, 2026 · Dabur investor presentations, annual reports, credit ratings, and earnings calls with AI summary, video, and audio access",
-   "source_url": "https://trendlyne.com/fundamentals/documents-investor-presentation/303/DABUR/dabur-india-ltd/"
+   "doc_title": "INVESTOR PRESENTATION QUARTER ENDED 31st DECEMBER 2025",
+   "excerpt": "ntained its strong double-digit growth momentum • Despite the headwinds during Q3, we outperformed category growth and registered market share gain .",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29012026170301_presentation.pdf"
   },
   {
    "company": "DABUR",
@@ -1621,23 +1651,16 @@
   {
    "company": "DABUR",
    "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Dabur India Ltd. Conference Calls and Earnings Call Transcripts",
-   "excerpt": "Jul 29, 2026 · Dabur India Ltd. Conference Calls and Earnings Call Transcripts: Get insights into company performance, financials, capex plans, and more.",
-   "source_url": "https://trendlyne.com/earnings-transcripts/303/DABUR/dabur-india-ltd/"
-  },
-  {
-   "company": "DABUR",
-   "topic": "earnings call transcript quick commerce modern trade rural demand",
    "doc_title": "Dabur India (NSE:DABUR) Earnings Call Transcripts",
    "excerpt": "May 7, 2026 · Transcripts for earnings calls and other events for Dabur India Limited, with audio and supporting slides and documents when applicable.",
    "source_url": "https://stockanalysis.com/quote/nse/DABUR/transcripts/"
   },
   {
    "company": "DABUR",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "Dabur Digital Annual Report - 2024-25",
-   "excerpt": "It is my privilege to write to all of you, our esteemed shareholders, and present the Integrated Annual Report of Dabur India Limited for the financial year 2023-24.",
-   "source_url": "https://www.dabur.com/digital-annual-reports/index.php"
+   "topic": "earnings call transcript quick commerce modern trade rural demand",
+   "doc_title": "Dabur India Ltd. Conference Calls and Earnings Call Transcripts",
+   "excerpt": "Jul 29, 2026 · Dabur India Results Earnings Call for Q1FY27 Conference Call with Dabur India Management and Analysts on Q1FY27 Performance and Outlook. Listen to the full earnings transcript.",
+   "source_url": "https://trendlyne.com/earnings-transcripts/303/DABUR/dabur-india-ltd/"
   },
   {
    "company": "DABUR",
@@ -1649,9 +1672,786 @@
   {
    "company": "DABUR",
    "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "Dabur Digital Annual Report - 2024-25",
+   "excerpt": "It is my privilege to write to all of you, our esteemed shareholders, and present the Integrated Annual Report of Dabur India Limited for the financial year 2023-24.",
+   "source_url": "https://www.dabur.com/digital-annual-reports/index.php"
+  },
+  {
+   "company": "DABUR",
+   "topic": "annual report trade receivables channel inventory filing",
    "doc_title": "Dabur India Ltd: 294 Filings, 1997-26 - Annual Reports ...",
    "excerpt": "All 294 Dabur India Ltd (DABUR) filings from 1997 to 2026 in one place: annual reports, earnings call transcripts, investor presentations, quarterly results and announcements, organised by fiscal year.",
    "source_url": "https://www.stockssena.com/research/filings/DABUR"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "FY26 PAT: INR 1,895 Cr STRONG OVERSEAS PRESENCE WITH 27% SALIENCY 21 MANUFACTURING FACILITIES 8 out of 10 Households consuming Dabur Products ONE OF THE LARGEST DISTRIBUTION ~ 8.5 MN OUTLETS",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 5,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Consistent Financial Upside Across Key Financial Metrics PAT 11.5% Market Capitalization 10x Revenue from Operations 10% 20 Year CAGR 20 Year CAGR In last 20 Years 1,900 13,193 FY 2006 FY 2026 Revenue from Operations 214 1,895 FY 2006 FY 2026 PAT 7,109 72,801 FY 2006 FY2026 Market Cap Figures in INR Crores",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "FY26 | International Business – Performance Overview 6.6% (10.4%) 11.2% 12.8% 34.6% (8.3%) MENA Egypt SSA Consol Namaste Turkey SAARC FY26 Constant Currency Growth % International Business grew by 6.2% in CC terms International Business FY26 Revenue Breakdown Americas, 15% Asia, 19% Africa, 23% Middle East, 27% Europe, 16%",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 14,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "FY26 | Strategic Pillars 01 02 03 04 8.5 Mn Outlet Reach New Age Channels now contributing 21% of Sales ESG Score at 83 Crisil upgraded category to ‘Strong’ 2.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 16,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "FY26 | Strategic Pillars 01 02 03 04 8.5 Mn Outlet Reach New Age Channels now contributing 21% of Sales ESG Score at 83 Crisil upgraded category to ‘Strong’ 2.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 17,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "FY26 | Innovation Contribution at 2.1% NPD % to Sales 2.1% FY26 NPD % to Sales – Vertical Wise in FY26 1.5% 1.3% 5.7% Healthcare HPC Food & Beverage Select NPDs launched during the Year Oxylife Detan Real Cheers A2 Cow Ghee Dia Control Juice ChawanShakti Gummies Imli Soft Chews",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 27,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "FY26 | Premiumization ; PREMIUM PORTFOLIO GREW 3X OF CORE Premiumisation % to Sales 16% 17.0% FY25 FY26 10% Growth YoY in premium Portfolio in FY26.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 29,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Premiumisation % to Sales – Vertical Wise in FY26 21.0% 13.9% 18.1% Healthcare HPC Food & Beverage Premium Products",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 29,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "FY26 | Strategic Pillars 01 02 03 04 8.5 Mn Outlet Reach New Age Channels now contributing 21% of Sales ESG Score at 83 Crisil upgraded category to ‘Strong’ 2.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 30,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "DABUR INDIA LIMITED 31 11% Primary Sales Growth Modern Trade 35% Primary Sales Growth E-Commerce 55.6% Sales Growth of Quick Commerce (make up 75% of E-commerce in FY26) Quick Commerce- growing strongly FY26 | NEW-AGE CHANNEL DRIVING GROWTH",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 32,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "FY26 | Strategic Pillars 01 02 03 04 8.5 Mn Outlet Reach New Age Channels now contributing 21% of Sales ESG Score at 83 Crisil upgraded category to ‘Strong’ 2.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 33,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "FY26 | Strategic Pillars 01 02 03 04 8.5 Mn Outlet Reach New Age Channels now contributing 21% of Sales ESG Score at 83 Crisil upgraded category to ‘Strong’ 2.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 35,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "INR 1 billion club brands Revenue (INR) Brands >1,500 Cr 1,000-1,500 Cr 500-1,000 Cr 100-500 Cr",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 8,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Distribution Expansion & New Age Channels Focus 4.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 16,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Investor presentation",
+   "doc_title": "DABUR Investor presentation, filed 06-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Distribution Expansion & New Age Channels Focus 4.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_06082026184931_Presentation.pdf",
+   "page": 17,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "During quarter 1 FY27, our consolidated business grew by 10.6%, driven by broad-based growth across both India and international businesses.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "India FMCG business revenue grew by 9.5%, backed by volume growth of 5%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "International business grew by 15.5% in INR terms.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "Within the domestic business, HPC portfolio continued its strong momentum, recording a 12.3% growth.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "Within OTC and Ethicals, Honitus registered a strong double-digit growth of 25%, driven by targeted media campaign reflecting and highlighting safety and efficacy.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 4,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "Our premiumization strategy continued to deliver strong results with active juices growing by over 40% and coconut water registering a growth of over 70% during the quarter.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 4,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "Our Foods business continued strong double-digit growth of around 30%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 4,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "Coming to international business, despite continued impact of war, we registered strong growth of 15.5% in INR terms.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 4,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "This was on back of around 9% growth in MENA region, 22% growth in U.K., European Union, 28% growth in Egypt, 27% growth in Turkey and 34% growth in Bangladesh.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 4,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "As a result, operating margin grew by 11% and profit after tax increased by 15%, both ahead of the top line, reflecting the strength of our brand portfolio, execution capabilities and resilient business model.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 4,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "I don't know whether you heard our Badshah business has actually grown by 13.3%, backed by roughly around 11% kind of a volume growth, which is there in the domestic business.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 5,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "Now the total contribution of e-commerce and quick commerce, which is helping us to take the brand beyond these 2 states is almost 6% of the overall turnover, and ecommerce is growing at triple digits for us as we are listing in more and more dark stores.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 5,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "And like I told you in juices, 100% juices grew by around 45% and our coconut water grew at around 70%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "Our fizz portfolio also grew by around 30%, 35%, driven by Hajmola Fizz as a brand and other fizz portfolio.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Earnings call transcript",
+   "doc_title": "DABUR Earnings call transcript, filed 03-Aug-2026 (about Q1_FY2027, filing date; document also mentions Q1_FY2026)",
+   "excerpt": "And that's why you saw overall food and beverage growth was around 8%, so which is pretty healthy and despite April not being very good.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_03082026145655_Transcript.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date; document also mentions Q1_FY2026",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Dabur India Ltd reported 15% surge in Net Profit at Rs 591 Crore in Q1 of 2026-27, backed by 10.6% jump in Consolidated Revenue at Rs 3,761 Crore.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "India FMCG business reported 9.5% growth with an underlying Volume growth of 5%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Dabur ended the first quarter of 2026-27 with an 11% growth in Operating Profit.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Net Profit surged 15% to Rs 591 Crore.\" Dabur reported strong growth across its key verticals with market share gains across over 90% of the portfolio during the quarter.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "\"As per syndicated data, rural demand grew 170 basis points ahead of urban demand in the first quarter, with growth of 6.2% in rural versus 4.6% in urban markets.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Innovation also remained a key contributor to growth, with new products accounting for 2.6% of Revenue.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "While the HPC business posted a strong 12.3 growth, the F&B business grew by 7.2% and the Healthcare vertical reported a 5.5% growth.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Within the HPC portfolio, the Shampoo business emerged as the strongest performer during the quarter reporting a 23% growth.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "The Skin & Salon portfolio, led by across-the-board gain in Gulabari, Fem and Oxylife brands, ended the quarter with an 8.1 % growth, while the Home Care business posted a 6% rise despite supply chain disruptions due to the Middle East war.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "In Healthcare, Digestives portfolio grew by 11.2% with all three brands - Hajmola Tablets, lsabgol and PudinHara growing at strong double digits.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Within the OTC business, brand Honitus grew by 28% and Health juices by 24%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "In the Health Supplements business, our flagship brand Dabur Honey reported an 8% growth.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "The Foods category ended Q1 up 29.2% and the Badshah business grew by 13.2%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "International Business Growth Dabur's International Business reported a 15.5% growth in INR terms.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 29-Jul-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "The Bangladesh business reported a 34.3% growth while the Egypt business grew by 28.4%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_29072026165946_Pressrelease.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "\" 1)Qh/J.r Dabur Q4 2025-26 Net Profit Surges 16% at Rs 362 Cr; Revenue Up 7.3% at Rs 3,038 Cr; India FMCG Biz Grows 9.5o/o New Delhi, May 7, 2026: India's leading FMCG major Dabur India Ltd today announced a 16% surge in Consolidated Net Profit for the fourth quarter of 2025-26 at Rs 362 Crore, up from Rs 312.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "Consolidated Revenue for the quarter marked a 7.3% jump to Rs 3,038 Crore from Rs 2,830 Crore a year ago.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "The India FMCG Business posted a growth of 9.5% during the quarter.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "Revenue for the full year 2025-26 marked a 5% growth at Rs 13, 193 Crore, while Net Profit for the year reported a 7.4% growth at Rs 1,869 Crore.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "Within Urban India, e-commerce and Modern Trade have been driving demand, growing by 49% and 19% respectively.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "Quick Commerce is driving the online business, posting a growth of 54%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "This channel was a major contributor to our Foods business, which grew by 30% in Q4.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "Category Growths Dabur's Hair Care portfolio grew by about 27% during the quarter, led by the Hair Oils business which reported a 28% growth.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 3,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "The Home Care business posted an over 24% growth, while the Digestives business ended the quarter with around a 15% gain.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 3,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "Dabur's Skin & Salon business grew by over 12% while the toothpaste category was up by over 7%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 3,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "The Badshah portfolio recorded 12% growth during the quarter.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 3,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "Dabur reported market share gains across 95% of its portfolio.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 3,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "We also gained 250bps market share in the Fruit Nectars category and 136bps in the 100% juices category.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 3,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "International Business Despite facing headwinds in Middle East, Dabur's International Business grew by 2.5% during the quarter, led by Sub-Saharan Africa (20%), UK & EU {10%); Namaste US (6.2%) and Bangladesh (22%).",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 3,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "In the fourth quarter, rural markets continued to outpace urban consumption with rural demand growing ahead of urban India by 350bps.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163837_PressRelease.pdf",
+   "page": 2,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Results filing",
+   "doc_title": "DABUR Results filing, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "(I) Current ratio 1.70 1.73 1.51 1.70 1.51 I Current assets I Current liabiiitiesl (m) Bad debts to account receivable ratio (in%) 1.80% 0.00% 0.00% 1.80% 0.00% [Bad debts I Average trade receivables!",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_07052026163419_Results.pdf",
+   "page": 11,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Results filing",
+   "doc_title": "DABUR Results filing, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "Unallocated other operating revenue 10.30 10.16 10.31 38.91 36.62 Revenue from operations 3,038.02 3,558.65 2,830.14 13,192.57 12,563.09 2 Segment results A.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_07052026163419_Results.pdf",
+   "page": 8,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Results filing",
+   "doc_title": "DABUR Results filing, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "(o) Debtors turnover# 16.26 13.27 13.88 16.26 13.88 I Sale of oroducts I Averal!e trade receivables] Inventory turnover# 14.61 14.48 13.96 14.61 13.96 (p) [Sale of products I Average inventory of finished goods and stock in trade!",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_07052026163419_Results.pdf",
+   "page": 11,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Results filing",
+   "doc_title": "DABUR Results filing, filed 07-May-2026 (about Q4_FY2026, filing date)",
+   "excerpt": "Unallocated other operating revenue 7.09 7.27 7.12 27.20 24.88 Revenue from operations 2,131.71 2,547.39 1,964.71 9,383.38 9,070.71 2 Segment results A.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_07052026163419_Results.pdf",
+   "page": 17,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Press release",
+   "doc_title": "DABUR Press release, filed 02-Mar-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "The company has demonstrated strong growth momentum with a 3-year CAGR of around 75% with an ARR of approximately Rs 100 Crore and high gross margin.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURU_02032026192506_upload.pdf",
+   "page": 2,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Results filing",
+   "doc_title": "DABUR Results filing, filed 30-Oct-2025 (about Q2_FY2026, filing date)",
+   "excerpt": "75 (1.65) b) Items that will be reclassified to profit or loss Income tax relating to items that will be reclassified to profit or loss 72.83 1.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURIN_30102025161247_Results.pdf",
+   "page": 6,
+   "period": "Q2_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Results filing",
+   "doc_title": "DABUR Results filing, filed 30-Oct-2025 (about Q2_FY2026, filing date)",
+   "excerpt": "Dabur India Limited Unaudited consolidated segment wise revenue, results, assets and liabilities for the quarter and half year ended 30 September 2025 .^Q.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURIN_30102025161247_Results.pdf",
+   "page": 7,
+   "period": "Q2_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Results filing",
+   "doc_title": "DABUR Results filing, filed 30-Oct-2025 (about Q2_FY2026, filing date)",
+   "excerpt": "The key standalone financial information is given below: Particulars Revenue from operations Profit before tax Net profit for the period/year Other comprehensive income/floss) Total comprehensive income for the period/year Quarter ended (30/09/2025) Unaudited 2,234.77 446.74 348.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURIN_30102025161247_Results.pdf",
+   "page": 11,
+   "period": "Q2_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Results filing",
+   "doc_title": "DABUR Results filing, filed 30-Oct-2025 (about Q2_FY2026, filing date)",
+   "excerpt": "Dabur India Limited Unaudited standalone segment wise revenue, results, assets and liabilities for the quarter and half year ended 30 September 2025 SI.No Particulars Segment revenue A.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURIN_30102025161247_Results.pdf",
+   "page": 14,
+   "period": "Q2_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "DABUR",
+   "topic": "Results filing",
+   "doc_title": "DABUR Results filing, filed 30-Oct-2025 (about Q2_FY2026, filing date)",
+   "excerpt": "14 [Profit before tax, finance costs, depreciation and amortisation expense/ {Finance costs + Principal repayment for Non-current borrowings and Non- current lease liabilities (including current maturities of non-current borrowings and non-current lease Interest service coverage ratio 27.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/DABURIN_30102025161247_Results.pdf",
+   "page": 15,
+   "period": "Q2_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
   }
  ],
  "industry_info": {
@@ -1669,5 +2469,5 @@
   "HINDUNILVR"
  ],
  "data_quality_flags": [],
- "fetched_at": "2026-10-21 00:00"
+ "fetched_at": "2026-10-21 09:40"
 }

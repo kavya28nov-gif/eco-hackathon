@@ -296,12 +296,13 @@ def build_evidence_pool(company_data: Dict[str, Any],
             dropped += 1
             continue
         url = x.get("source_url", "")
-        add(company=ticker, metric="text", period="", period_type="", value=None, unit="",
+        add(company=ticker, metric="text", period=x.get("period") or "", period_type="", value=None, unit="",
             source_name=x.get("doc_title", ""), source_url=url, tier=classify_tier(url, cw),
-            scope="unspecified", quote=text, kind="text")
+            scope="unspecified", quote=text, page=x.get("page"), kind="text")
     if dropped:
-        flags.append(f"{dropped} search excerpts dropped: they describe a web page, not a fact "
-                     f"(need real quotes from transcripts/presentations).")
+        flags.append(f"{dropped} search excerpts dropped: they describe a web page, not a fact.")
+    if not any(x.get("kind") == "filing_pdf" for x in company_data.get("text_excerpts", [])):
+        flags.append("No quotes from the company's own filings (transcript / presentation) this run.")
     return pool, flags
 
 
@@ -411,7 +412,9 @@ def test_revenue_vs_profit(pool, profit_override: Optional[Dict[str, float]] = N
     rows = []
     for p in rev:
         b = same_quarter_last_year(p)
-        if b in rev and p in np_ and b in np_:
+        # profit growth "%" on a loss (or zero) base means nothing -- loss to profit is
+        # not "+300%" -- so such quarters are left out of this test
+        if b in rev and p in np_ and b in np_ and np_[b].value > 0:
             base_rev = (base_revenue_override or {}).get(b, rev[b].value)
             prof = (profit_override or {}).get(p, np_[p].value)
             rg, pg = _pct(rev[p].value, base_rev), _pct(prof, np_[b].value)
@@ -541,8 +544,89 @@ def test_yoy_change(pool, metric: str, title: str, min_move: float):
     }
 
 
+MIN_PRICE_MIX_PP = 2.0      # price/mix share of growth that is worth talking about (percentage points)
+MIN_HISTORY_FOR_Z = 3       # fewer past quarters than this -> score by the fixed rule below, and say so
+MAX_USG_VS_REVENUE_PP = 10.0  # extracted USG further than this from reported revenue growth = not company-level
+# words that mean a volume number is for one part of the company, not all of it
+SEGMENT_HINTS = ("segment", "division", "business", "decorative", "domestic", "international",
+                 "branded", "category", "portfolio", "subsidiar")
+
+
+def test_price_vs_volume(pool):
+    """The headline FMCG test from our Round 1 plan: how much of sales growth is real
+    volume (more units sold) and how much is price / mix?
+        price_mix_pp = sales growth - volume growth   (both as the company reports them)
+    Sales growth = the company's own 'underlying sales growth' if it reports one, else
+    reported revenue growth from screener (flagged -- includes acquisitions/forex)."""
+    vol = series(pool, "underlying_volume_growth_pct", "quarterly")
+    usg = series(pool, "underlying_sales_growth_pct", "quarterly")
+    rev = series(pool, "revenue_from_operations", "quarterly")
+    rows, usg_rejected = [], []
+    for p, v in vol.items():
+        b = same_quarter_last_year(p)
+        rev_growth = round(_pct(rev[p].value, rev[b].value), 1) if p in rev and b in rev else None
+        # Cross-check: a company-level USG cannot be miles away from reported revenue growth.
+        # Godrej's filing gave "USG ~47%" for one country while consolidated sales grew 19% --
+        # a pattern match cannot tell a segment from the company, this check can.
+        use_usg = p in usg and (rev_growth is None or abs(usg[p].value - rev_growth) <= MAX_USG_VS_REVENUE_PP)
+        if p in usg and not use_usg:
+            usg_rejected.append(f"{p}: USG {usg[p].value}% vs reported revenue growth {rev_growth}%")
+        if use_usg:
+            sales, basis, sales_ids = usg[p].value, "underlying sales growth", [usg[p].id]
+        elif rev_growth is not None:
+            sales, basis, sales_ids = rev_growth, "reported revenue growth", [rev[p].id, rev[b].id]
+        else:
+            continue
+        rows.append({"period": p, "volume_growth_pct": v.value, "sales_growth_pct": sales,
+                     "price_mix_pp": round(sales - v.value, 1), "sales_basis": basis,
+                     "evidence_ids": [v.id] + sales_ids})
+    if not rows:
+        return None
+    latest, hist_rows = rows[-1], rows[:-1]
+    price_led = latest["price_mix_pp"] > latest["volume_growth_pct"]
+    # "driven equally by volume and price" (e.g. 5 and 5) is neither price- nor volume-led
+    balanced = abs(latest["price_mix_pp"] - latest["volume_growth_pct"]) < 1.0
+    if len(hist_rows) >= MIN_HISTORY_FOR_Z:
+        hist = [r["price_mix_pp"] for r in hist_rows]
+        score, scored_by = round(abs(robust_z(latest["price_mix_pp"], hist)), 2), "history"
+        med = round(statistics.median(hist), 1)
+        direction = 1 if latest["price_mix_pp"] > med else -1
+    else:
+        # Too few quarters of volume data to say "unusual vs own history". Fixed rule
+        # instead: growth that is mostly price, by a material margin, is worth a look.
+        # The result says clearly that it was scored by rule, not by history.
+        hit = price_led and not balanced and latest["price_mix_pp"] >= MIN_PRICE_MIX_PP
+        score, scored_by, med = (INVESTIGATE_SCORE if hit else 0.0), "rule", None
+        direction = 1 if price_led else -1
+    persistence = 0
+    for r in reversed(rows):
+        if (r["price_mix_pp"] > r["volume_growth_pct"]) == price_led:
+            persistence += 1
+        else:
+            break
+    base = vol.get(same_quarter_last_year(latest["period"]))
+    return {
+        "test": "price_vs_volume",
+        "title": "Price vs volume: growth "
+                 + ("split evenly" if balanced else "led by price/mix" if price_led else "led by volume"),
+        "balanced": balanced,
+        "latest_period": latest["period"], "score": score, "scored_by": scored_by,
+        "headline_value": latest["price_mix_pp"], "history_median": med, "persistence": persistence,
+        "material": abs(latest["price_mix_pp"]) >= MIN_PRICE_MIX_PP, "min_move": MIN_PRICE_MIX_PP,
+        "yoy": True, "direction": direction, "price_led": price_led,
+        "base_volume": base.value if base else None, "sales_basis": latest["sales_basis"],
+        "usg_rejected": usg_rejected,
+        "unit": "percentage", "rows": rows, "periods_used": [latest["period"]],
+        "metrics_used": ["underlying_volume_growth_pct",
+                         "underlying_sales_growth_pct" if latest["sales_basis"].startswith("underlying")
+                         else "revenue_from_operations"],
+        "evidence_ids": latest["evidence_ids"],
+    }
+
+
 def detect_angles(pool: List[Evidence]) -> List[Dict[str, Any]]:
     tests = [
+        test_price_vs_volume(pool),
         test_revenue_vs_profit(pool),
         test_cash_conversion(pool),
         test_level_trend(pool, "debtor_days", "annual", "Receivable (debtor) days vs own history", MIN_DAYS_MOVE),
@@ -631,9 +715,50 @@ def red_team(angle: Dict[str, Any], pool: List[Evidence], conflicts: List[Dict[s
                 base_hit = True
                 checks.append({"check": "base_effect", "argument": "The comparison period may itself be unusual.",
                                "result": "weakened", "detail": f"Base period {p} for {m} looks unusual."})
+    if test == "price_vs_volume" and angle.get("base_volume") is not None and angle["base_volume"] <= 0:
+        # volume fell (or was flat) a year ago, so this year's volume number flatters
+        base_hit = True
+        checks.append({"check": "base_effect", "argument": "The comparison period may itself be unusual.",
+                       "result": "weakened",
+                       "detail": f"Volume growth in the same quarter last year was {angle['base_volume']}%, "
+                                 f"so this year's volume growth is on a low base."})
     if not base_hit:
         checks.append({"check": "base_effect", "argument": "The comparison period may itself be unusual.",
                        "result": "survived", "detail": "Base period values are in line with their own history."})
+
+    if test == "price_vs_volume":
+        # is the volume number for the whole company, or one segment of it?
+        vol_ev = next((e for e in pool if e.id == angle["evidence_ids"][0]), None)
+        quote = (vol_ev.quote if vol_ev else "").lower()
+        hints = sorted({w for w in SEGMENT_HINTS if w in quote})
+        checks.append({"check": "volume_scope",
+                       "argument": "The volume figure may be for one segment, not the whole company.",
+                       "result": "weakened" if hints else "survived",
+                       "detail": (f"The volume quote mentions '{', '.join(hints)}', so it may cover only part of "
+                                  f"the company (page {vol_ev.page}): \"{vol_ev.quote[:160]}\"") if hints and vol_ev
+                       else "The volume quote does not name a segment; read as company-level."})
+        if angle.get("usg_rejected"):
+            checks.append({"check": "cross_check",
+                           "argument": "An extracted number may be a segment figure picked up by mistake.",
+                           "result": "survived",
+                           "detail": "Extracted USG ignored because it is far from reported revenue growth "
+                                     f"(more than {MAX_USG_VS_REVENUE_PP:.0f} pp): {'; '.join(angle['usg_rejected'])}. "
+                                     f"Reported revenue growth used instead."})
+        like_for_like = angle.get("sales_basis", "").startswith("underlying")
+        checks.append({"check": "like_for_like",
+                       "argument": "Sales growth may include acquisitions, disposals or currency, not just price.",
+                       "result": "survived" if like_for_like else "weakened",
+                       "detail": "Company's own underlying sales growth used (excludes acquisitions/disposals)."
+                       if like_for_like else
+                       "Company does not report underlying sales growth in the filings read, so reported revenue "
+                       "growth was used; part of the 'price/mix' gap may be acquisitions or currency."})
+        if angle.get("scored_by") == "rule":
+            checks.append({"check": "history_depth",
+                           "argument": "With few quarters of volume data, 'unusual' cannot be tested.",
+                           "result": "weakened",
+                           "detail": f"Only {len(angle['rows'])} quarter(s) of volume data found, so the angle was "
+                                     f"picked by a fixed rule (price/mix >= {MIN_PRICE_MIX_PP} pp and larger than "
+                                     f"volume), not by comparing with the company's own history."})
 
     # (3) Source conflicts / basis changes on the numbers we use — with a sensitivity test
     hits = [c for c in conflicts if c["metric"] in angle["metrics_used"] and c["period"] in periods]
@@ -728,6 +853,55 @@ def red_team(angle: Dict[str, Any], pool: List[Evidence], conflicts: List[Dict[s
 # =============================================================================
 # 8. STRENGTH RUBRIC (fixed rules — explain these to the judges)
 # =============================================================================
+# Which computed number a quote may confirm, and the words that must be in the same
+# sentence (so "10%" next to "volume" is not taken as revenue growth).
+CONFIRM_WORDS = {
+    "revenue_yoy_pct": ("revenue", "sales", "turnover", "usg"),
+    "profit_yoy_pct": ("profit", "pat"),
+    "change_pp": ("margin", "ebitda"),
+    "value": ("margin", "ebitda"),
+    "volume_growth_pct": ("volume", "uvg"),
+    "sales_growth_pct": ("sales", "usg", "revenue", "turnover"),
+}
+REVENUE_WORDS = ("revenue", "sales", "turnover")
+MAX_CONTEXT_QUOTES = 8   # filings give 50-90 quotes; showing all of them buries the ones that matter
+
+
+def _confirm_targets(angle: Dict[str, Any], used: List[Evidence]) -> List[Tuple[float, str, Tuple[str, ...], bool]]:
+    """(number, what it is, words needed, is_percent) for the latest period of the angle."""
+    targets = []
+    row = (angle.get("adjusted") or angle)["rows"][-1]
+    for key, words in CONFIRM_WORDS.items():
+        # "value" means the margin level only in the margin test; in the days tests it is
+        # a number of days, which a "margin" sentence must never confirm
+        if key == "value" and not angle["test"].startswith("yoy_"):
+            continue
+        if isinstance(row.get(key), (int, float)):
+            targets.append((row[key], key.replace("_", " "), words, True))
+    for e in used:     # the revenue figure itself in crore, e.g. "INR 17,184 crores"
+        if e.metric == "revenue_from_operations" and e.period == angle["latest_period"] and e.value:
+            targets.append((e.value, f"revenue {e.value:,.0f} crore", REVENUE_WORDS, False))
+    return targets
+
+
+def _quote_confirms(quote: str, targets) -> Optional[str]:
+    """Name of the first target this quote confirms, else None.
+    Percent: the quote's number must be followed by '%' and within 0.5 (press releases
+    round 8.3% to 8%). Crore: within 1%. And the right word must be in the sentence."""
+    low = quote.lower()
+    for m in re.finditer(r"(-?\d[\d,]*\.?\d*)\s*(%?)", quote):
+        try:
+            n = float(m.group(1).replace(",", "").rstrip("."))
+        except ValueError:
+            continue
+        for value, label, words, is_pct in targets:
+            if not any(w in low for w in words):
+                continue
+            if is_pct and m.group(2) == "%" and abs(n - value) <= 0.5:
+                return f"{label} ({m.group(0).strip()} in the filing vs {value} computed)"
+            if not is_pct and value and abs(n - value) / abs(value) <= 0.01:
+                return f"{label} ({m.group(0).strip()} in the filing)"
+    return None
 def grade(angle: Dict[str, Any], pool: List[Evidence], peer: Dict[str, Any],
           checks: List[Dict[str, Any]]) -> Tuple[str, List[str], List[Evidence]]:
     ids = set(angle["evidence_ids"])
@@ -740,10 +914,25 @@ def grade(angle: Dict[str, Any], pool: List[Evidence], peer: Dict[str, Any],
                 agree = e.value and abs(o.value - e.value) / abs(e.value) * 100 <= CONFLICT_PCT
                 roles[o.id] = "supports" if agree else "conflicts"
                 used.append(o)
+    # Text: a filing quote that states the SAME number we calculated (for the same
+    # quarter) is independent confirmation -> "supports". Everything else is context.
+    targets = _confirm_targets(angle, used)
+    context_kept = 0
     for e in pool:
         if e.kind == "text":
-            roles[e.id] = "context"
-            used.append(e)
+            hit = None
+            same_quarter = not e.period or e.period == angle["latest_period"]
+            if e.tier == "filing" and same_quarter:
+                hit = _quote_confirms(e.quote, targets)
+            if hit:
+                roles[e.id] = "supports"
+                e.note = f"quote confirms {hit}"
+                used.append(e)
+            elif same_quarter and context_kept < MAX_CONTEXT_QUOTES:
+                # a few quotes about the same quarter, for the reader -- not counted as support
+                roles[e.id] = "context"
+                context_kept += 1
+                used.append(e)
     for e in used:
         e.role = roles[e.id]
     support = [e for e in used if roles[e.id] == "supports"]
@@ -781,6 +970,13 @@ def falsification(angle: Dict[str, Any], company: str) -> str:
         side = "at or above" if angle["headline_value"] < angle["history_median"] else "at or below"
         return (f"This finding is wrong if {nxt} operating cash flow / profit after tax (before exceptional items, "
                 f"same consolidated basis) is {side} {angle['history_median']}, the prior median.")
+    if t == "price_vs_volume":
+        if angle.get("price_led"):
+            return (f"This finding is wrong if {company}'s {nxt} results show volume growth equal to or larger "
+                    f"than the price/mix part of sales growth (sales growth minus volume growth), as the "
+                    f"company itself reports them.")
+        return (f"This finding is wrong if {company}'s {nxt} results show price/mix (sales growth minus volume "
+                f"growth) larger than volume growth, as the company itself reports them.")
     if t.startswith("yoy_"):
         return (f"This finding is wrong if {_metric_label(angle['metrics_used'][0])} in {nxt} is within "
                 f"{angle['min_move']} percentage points of the same quarter last year.")
@@ -978,6 +1174,31 @@ def template_claim(angle: Dict[str, Any], company: str, checks: List[Dict[str, A
                    "income or lower tax -- some of these do not repeat."]
         why.append(f"The gap has the same direction for {angle['persistence']} consecutive quarter(s) "
                    f"of at least {GAP_PP:.0f} percentage points.")
+    elif t == "price_vs_volume":
+        r = a["rows"][-1]
+        period = r["period"].replace("_", " ")
+        if angle.get("balanced"):
+            claim = (f"In {period}, {company}'s {r['sales_basis']} of {r['sales_growth_pct']}% came roughly "
+                     f"equally from volume ({r['volume_growth_pct']}%) and price/mix ({r['price_mix_pp']} "
+                     f"percentage points){caveat}.")
+            why = ["Balanced growth: neither pricing nor volume alone is carrying the company."]
+        elif angle.get("price_led"):
+            claim = (f"In {period}, {company}'s {r['sales_basis']} was {r['sales_growth_pct']}% but volume growth "
+                     f"was only {r['volume_growth_pct']}%: {r['price_mix_pp']} percentage points of growth came "
+                     f"from price and mix, not from selling more{caveat}.")
+            why = ["Price-led growth can fade fast if input costs fall or competitors cut prices; "
+                   "volume is the harder-to-fake signal of demand.",
+                   "Check next: price increases taken, mix shift to premium packs, and rural vs urban volume."]
+        else:
+            claim = (f"In {period}, {company}'s volume growth of {r['volume_growth_pct']}% did most of the work: "
+                     f"{r['sales_basis']} was {r['sales_growth_pct']}%, so price and mix added "
+                     f"{r['price_mix_pp']} percentage points{caveat}.")
+            why = ["Volume-led growth with little pricing can mean the company is cutting price "
+                   "or giving more grammage to hold share -- watch margins.",
+                   "Check next: price cuts, grammage changes, and gross margin."]
+        if not angle.get("balanced"):
+            why.append(f"Growth has been {'price' if angle.get('price_led') else 'volume'}-led for "
+                       f"{angle['persistence']} consecutive quarter(s) of company-reported data.")
     elif t == "cash_conversion":
         r = a["rows"][-1]
         claim = (f"In {r['period']}, {company}'s operating cash flow was {r['ocf_to_profit']}x net profit, versus a prior "
@@ -1114,7 +1335,8 @@ def run_validation(company_data: Dict[str, Any],
                              for r in show["rows"]],
                 "evidence": [{"id": e.id, "fact": f"{e.metric} {e.period}".strip(), "value": e.value, "unit": e.unit,
                               "source_name": e.source_name, "source_url": e.source_url, "tier": e.tier,
-                              "scope": e.scope, "role": e.role, "page": e.page, "quote": e.quote} for e in used],
+                              "scope": e.scope, "role": e.role, "page": e.page, "quote": e.quote,
+                              "note": e.note} for e in used],
                 "counterarguments": checks, "counter_search": counter_search, "peer_check": peer,
                 "falsification_condition": falsification(angle, company),
                 "strength": strength, "strength_reasons": reasons,
@@ -1183,7 +1405,8 @@ if __name__ == "__main__":
 # why_it_matters          [str]
 # numbers                 [{period, ...computed values, evidence_ids}]  -> charts
 # timeline                [{period, note}]
-# evidence                [{id, fact, value, unit, source_name, source_url, tier, scope, page, quote}]
+# evidence                [{id, fact, value, unit, source_name, source_url, tier, scope, page, quote,
+#                           note (added: e.g. "quote confirms revenue yoy pct ...")}]
 # counterarguments        [{check, argument, result: survived|weakened|fatal|not_run, detail}]
 # peer_check              {result: company_specific|partly_shared|sector_wide|not_run, detail}
 # falsification_condition str

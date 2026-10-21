@@ -132,8 +132,17 @@ if "run" in st.session_state:
                              var_name="series", value_name="yoy_pct")
             st.plotly_chart(px.bar(long, x="period", y="yoy_pct", color="series", barmode="group",
                                    title="Revenue vs net profit growth, year on year (%)"), width="stretch")
+        elif not nums.empty and "price_mix_pp" in nums:
+            long = nums.melt(id_vars="period", value_vars=["volume_growth_pct", "price_mix_pp"],
+                             var_name="part", value_name="pct")
+            st.plotly_chart(px.bar(long, x="period", y="pct", color="part", barmode="relative",
+                                   title="Sales growth split: volume vs price/mix (percentage points)"),
+                            width="stretch")
         elif not nums.empty:
-            ycol = [c for c in nums.columns if c not in ("period", "base", "evidence_ids")][-1]
+            # only numeric columns can go on the y-axis (rows can also carry text like 'sales_basis')
+            numeric = [c for c in nums.columns if c not in ("period", "base", "evidence_ids")
+                       and pd.api.types.is_numeric_dtype(nums[c])]
+            ycol = numeric[-1]
             st.plotly_chart(px.line(nums, x="period", y=ycol, markers=True, title=ycol), width="stretch")
         if insight.get("timeline"):
             st.markdown("#### Timeline")

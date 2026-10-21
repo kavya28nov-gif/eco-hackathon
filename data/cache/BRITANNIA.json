@@ -2,7 +2,7 @@
  "company": "Britannia",
  "ticker": "BRITANNIA",
  "sector": "Track C - Consumer, FMCG & Retail",
- "record_count": 144,
+ "record_count": 145,
  "financial_records": [
   {
    "company": "BRITANNIA",
@@ -1587,6 +1587,21 @@
    "period_months": 12,
    "doc_title": "BRITANNIA Working Capital & Operational Ratios (FY2026)",
    "source_url": "https://www.screener.in/company/BRITANNIA/consolidated/"
+  },
+  {
+   "company": "BRITANNIA",
+   "metric": "underlying_volume_growth_pct",
+   "value": 9.0,
+   "unit": "percentage",
+   "period": "Q1_FY2027",
+   "period_type": "quarterly",
+   "period_months": 3,
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "quote": "First one on your volume growth of 9%",
+   "page": 16,
+   "period_basis": "filing date, confirmed by the document",
+   "doc_kind": "Earnings call transcript"
   }
  ],
  "text_excerpts": [
@@ -1601,21 +1616,21 @@
    "company": "BRITANNIA",
    "topic": "investor presentation underlying volume growth price quarterly results",
    "doc_title": "Britannia Industries - Investor Presentations - Trendlyne",
-   "excerpt": "May 8, 2026 · Britannia Industries quarterly results: revenue, profit, and P&L – 13 quarter history",
+   "excerpt": "May 8, 2026 · Britannia Industries Investor Presentation: Get insights into company performance, financials, capex plans and more",
    "source_url": "https://trendlyne.com/fundamentals/documents-investor-presentation/220/BRITANNIA/britannia-industries-ltd/"
   },
   {
    "company": "BRITANNIA",
    "topic": "investor presentation underlying volume growth price quarterly results",
    "doc_title": "Britannia Industries Ltd. Investor Presentation - Trendlyne",
-   "excerpt": "Pursuant to Regulation 30 read with Clause 15 of Para A of Part A of Schedule III of the SEBI Listing Regulations, 2015, please find enclosed the copy of Investors/Analysts Conference Call Presentation pertaining to the financial results and operations of the Company for the quarter ended 30th June, 2026.",
+   "excerpt": "Britannia Industries Ltd. Investor Presentation: Get insights into company performance, financials, capex plans and more",
    "source_url": "https://trendlyne.com/investor-presentations/220/BRITANNIA/britannia-industries-ltd/"
   },
   {
    "company": "BRITANNIA",
    "topic": "earnings call transcript quick commerce modern trade rural demand",
    "doc_title": "Earnings call transcript: Britannia Industries posts strong ...",
-   "excerpt": "Aug 7, 2026 · General trade improved, while e-commerce and quick commerce continued to grow faster than the core channel. Management said it expects to keep FY2027 EBITDA margins at least at FY2026 levels if ...",
+   "excerpt": "Aug 7, 2026 · Britannia delivered a solid start to FY2027, with growth broadening across its core biscuit business and newer adjacencies. Management said the quarter showed mid-teen revenue growth momentum in...",
    "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-britannia-industries-posts-strong-q1-2026-growth-93CH-4845102"
   },
   {
@@ -1628,15 +1643,22 @@
   {
    "company": "BRITANNIA",
    "topic": "earnings call transcript quick commerce modern trade rural demand",
-   "doc_title": "Britannia Industries Limited Q4 2026 Earnings Call Transcript",
-   "excerpt": "May 8, 2026 · Britannia Industries Limited (NSE: BRITANNIA) Q4 2026 Earnings Call dated May. 08, 2026 Corporate Participants: Ayush Agarwal — Investor Relations Rakshit Hargave — Chief Executive...",
-   "source_url": "https://alphastreet.com/india/britannia-industries-limited-britannia-q4-2026-earnings-call-transcript/"
+   "doc_title": "Britannia Q1 FY26 Earnings Call Transcript",
+   "excerpt": "Aug 12, 2025 · The document is a communication from Britannia Industries Limited to the BSE and NSE, enclosing the transcript of an Investors/Analysts Conference Call held on August 6, 2025, discussing the company's financial results for the quarter ended June 30, 2025.",
+   "source_url": "https://www.scribd.com/document/966238229/Concall-3"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "annual report trade receivables channel inventory filing",
+   "doc_title": "annual report 25 V1_Digital_FIN_Hires_1 - media.britannia.co.in",
+   "excerpt": "Annual Report on the Performance of Britannia Industries Limited (‘Britannia’ or the ‘Company’) along with the Audited Financial Statements for the Financial Year ended 31 March 2025 (‘FY 2024-25’).",
+   "source_url": "https://media.britannia.co.in/2_annual_report_25_V1_Digital_FIN_Hires_1_SAP_b1a1c4c085.pdf"
   },
   {
    "company": "BRITANNIA",
    "topic": "annual report trade receivables channel inventory filing",
    "doc_title": "investor page - Britannia",
-   "excerpt": "Jun 30, 2026 · Get insights into Britannia's stock market performance and investment potential. Understand key financial aspects before considering Britannia shares today.",
+   "excerpt": "Jun 30, 2026 · Understand key financial aspects before considering Britannia shares today.",
    "source_url": "https://www.britannia.co.in/investors/financial-performance/annual-report"
   },
   {
@@ -1648,10 +1670,465 @@
   },
   {
    "company": "BRITANNIA",
-   "topic": "annual report trade receivables channel inventory filing",
-   "doc_title": "annual report 25 V1_Digital_FIN_Hires_1 - media.britannia.co.in",
-   "excerpt": "Annual Report on the Performance of Britannia Industries Limited (‘Britannia’ or the ‘Company’) along with the Audited Financial Statements for the Financial Year ended 31 March 2025 (‘FY 2024-25’).",
-   "source_url": "https://media.britannia.co.in/2_annual_report_25_V1_Digital_FIN_Hires_1_SAP_b1a1c4c085.pdf"
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "So if we go to the main business overview, you will see that on a performance scorecard basis, our revenue from operations at a console level in the first quarter were about INR 4,964 crores, which on an annual basis gave us a growth of 9.5%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "It's also important to note that actually at a stand-alone basis, we grew at 10%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "PAT was at about 11.9% of revenue and the 12-month growth on PAT was 13.6%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "We know that this growth of 9% in the last 8 quarters or 9 quarters is equal to maybe the previous quarter that we had.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 7,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "On the key financial lines, as you have already seen, from a net sales point of view, 9.5% growth and operating profit, PBT and PAT have all been ahead of sales at 12.7%, 13.7%, 13.6%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 7,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Similarly, on a 5-year trend, you can see that profit from operations at 15.3% is about at an acceptable level and PBT is also at a level which is there also in light of the inflationary situation that we had because of these extraordinary circumstances and PAT is what it is based on the PBT that we have been able to deliver.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 7,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "And you had given an earlier number of around INR100 crores ARR with this 30% kind of growth and overall buoyancy, what would be the ARR currently?",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 9,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "And on the other channels which you have given, basically e-commerce, quick commerce, etc, the earlier number you had given was 6% of the sales comes from e-commerce.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 9,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "So like I said, Q-com is now literally 80% to 85% of overall e-commerce.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 10,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "So the revenue contribution from the non-biscuit portfolio has remained range bound at around 25%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 12,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "So let me give you the volume growth that we had for the quarter was close to 9%, which in any respect is a good volume growth.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 13,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Britannia Industries Limited August 07, 2026 Page 14 of 18 Arnab Mitra: My first question was on your volume growth number of 9%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 15,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "That essentially implies you had only 1% pricing in the quarter, which seems actually lower than what you had last quarter.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 15,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "So just to reiterate the 5 pillars that we have put, you can see that we continue to drive efficiencies in sales, distribution and supply chain.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Earnings call transcript",
+   "doc_title": "BRITANNIA Earnings call transcript, filed 12-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "And you will notice the last 2 – so we know that laminate prices, which are also dependent on hydrocarbon prices have actually gone up for all companies, and we are no exception.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_12082026192150_Intimation_Signed.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Investor presentation",
+   "doc_title": "BRITANNIA Investor presentation, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "i n 5 Performance Scorecard – Q1 26-27 Source: Company Financials – Consolidated Results *Owner’s share 12 Months Growth +9.5% 12 Months Growth +13.6% Q1’27 11.9% of Revenue Revenue from Operations Q1’27 Rs 4,964 Crore Profit after Tax* j:j;JiUit·I I \\",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07082026071136_Intimation_signed.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Investor presentation",
+   "doc_title": "BRITANNIA Investor presentation, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Other States grew double-digits @ 1.3x of Key States Key States contributing >50% of Domestic Revenue Q1'25 Q2'25 Q3'25 Q4'25 Q1'26 Q2'26 Q3'26 Q4'26 Q1'27 Key States Others",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07082026071136_Intimation_signed.pdf",
+   "page": 9,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Investor presentation",
+   "doc_title": "BRITANNIA Investor presentation, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "i n 11 Driving Croissant through Innovations 03 25-26 Launch Q1’ 26-27 Launch Q1’27 Growth > 30% 1 >30%",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07082026071136_Intimation_signed.pdf",
+   "page": 12,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Investor presentation",
+   "doc_title": "BRITANNIA Investor presentation, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "i n 14 ESG – Building a sustainable, profitable business Progress on ESG KPIs over Q4’26 05 ~16% increase in Renewable Electricity share in Own Plants 3,97,125 BNF beneficiaries reached in Q1’27, representing ~78% of FY 25-27 ~0.7% increase in women factory workforce",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07082026071136_Intimation_signed.pdf",
+   "page": 15,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Investor presentation",
+   "doc_title": "BRITANNIA Investor presentation, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "i n 18 FY 23-24 (4%) FY 24-25 (6%) FY 25-26 (8%) Revenue trends Rs Crs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07082026071136_Intimation_signed.pdf",
+   "page": 19,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Investor presentation",
+   "doc_title": "BRITANNIA Investor presentation, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "in the bracket indicate revenue growths 13% 5% 9% 12% 14% 9% 17% 17% 20% 12-month Growth% 24-month Growth% 4% 4% 6% 9% 10% 4% 9% 7% 9% Q1’27 3,970 4,370 4,192 4,014 4,130 4,566 4,463 4,376 4,535 4,752 4,885 4,686 4,964 Q1 Q2 Q3 Q4 Q1 Q2 Q3 Q4 Q1 Q2 Q3 Q4 Q1 j:j;JiUit·I I \\",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07082026071136_Intimation_signed.pdf",
+   "page": 19,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Investor presentation",
+   "doc_title": "BRITANNIA Investor presentation, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "i n 7 All Channels contributing to healthy growth 01",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07082026071136_Intimation_signed.pdf",
+   "page": 8,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Investor presentation",
+   "doc_title": "BRITANNIA Investor presentation, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Other Channels continued steady momentum, growing 2.5x of General Trade; E-Commerce leads with strong double-digit Q1'25 Q2'25 Q3'25 Q4'25 Q1'26 Q2'26 Q3'26 Q4'26 Q1'27 General Trade Other Channels - &",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07082026071136_Intimation_signed.pdf",
+   "page": 8,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Investor presentation",
+   "doc_title": "BRITANNIA Investor presentation, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Key States delivering 1.8x of 25-26 growth in Q1’27",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07082026071136_Intimation_signed.pdf",
+   "page": 9,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Investor presentation",
+   "doc_title": "BRITANNIA Investor presentation, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "i n 12 Other Adjacency Businesses 03 Adjacency Businesses (Cake, Rusk & Wafers) – Delivered double-digit growth led by portfolio Innovations, new variants Dairy – Portfolio grew in double-digits, fueled by Ghee, Cheese International Business – Flat growth for the quarter, with business stabilizing in the last part of the quarter.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07082026071136_Intimation_signed.pdf",
+   "page": 13,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 06-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Press Release Britannia’s Consolidated Sales for the quarter grew 9.5%, while Net profit grew 14.1% Mumbai, August 6th, 2026: Britannia’s Consolidated Sales for the Quarter ended 30th June 2026 stands at Rs 4,964 Crores, growing 9.5% and Net Profit stands at Rs 593 Crores, growing 14.1% over the same period last year.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_06082026190750_SE_Intimation_-_Press_Release_Britannia.pdf",
+   "page": 1,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 06-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "The Standalone Sales for the Quarter grew 10.0% over the same period last year.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_06082026190750_SE_Intimation_-_Press_Release_Britannia.pdf",
+   "page": 1,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Results filing",
+   "doc_title": "BRITANNIA Results filing, filed 06-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "YEAR ENDED 30.06.2026 31.03.2026 30.06.2025 31.03.2026 (Unaudited) (Audited) 6 (Unaudited) (Audited) Total revenue from operations 4,833.50 4,553.04 4,452.74 18,445.82 Profit before tax 778.90 787.58 674.20 3,293.34 Net profit for the period / year 576.38 685.47 498.27 2,561.72 Total comprehensive income 576.38 684.94 498.27 2,561.19 2.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_06082026185151_Outcome_Signed.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 07-May-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Press Release Britannia’s Consolidated Sales for the quarter grew 7% while Net profit grew 22% Bengaluru, May 7th, 2026: Britannia’s Consolidated Sales for the Quarter ended 31st March 2026 stands at Rs 4,686 Crores, growing 7.1% and Net Profit stands at Rs 680 Crores, growing 21.6% over the same period last year.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07052026210556_Press_Release_Britannia_Q4_25-26_V5.pdf",
+   "page": 1,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 07-May-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "18,858 Crores growing 7.5%, while the Net Profit stands at Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07052026210556_Press_Release_Britannia_Q4_25-26_V5.pdf",
+   "page": 1,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 07-May-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Rakshit Hargave, Managing Director & Chief Executive Officer, said: “The Business witnessed a steady start to the quarter, with growth of ~9% in the first two months, before moderating to a lower number in March, primarily on account of supply disruptions in the International Business following the West Asia conflict.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07052026210556_Press_Release_Britannia_Q4_25-26_V5.pdf",
+   "page": 1,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 07-May-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Over the year, we made significant strides in scaling our presence in the rapidly growing e-commerce channel, now contributing ~6% to the Domestic business, driven by e-commerce-first launches and a premium mix of offerings.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07052026210556_Press_Release_Britannia_Q4_25-26_V5.pdf",
+   "page": 1,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 07-May-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "For the year ended 31st March 2026, the Consolidated Sales stands at Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07052026210556_Press_Release_Britannia_Q4_25-26_V5.pdf",
+   "page": 1,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Results filing",
+   "doc_title": "BRITANNIA Results filing, filed 07-May-2026 (about Q4_FY2026, filing date, confirmed by the document)",
+   "excerpt": "The Statement includes the Group’s share of net profit after tax of ₹ 0.48 crore and total comprehensive income of ₹ 0.48 crore for the year ended 31 March 2026, in respect of 3 associate companies, based on their annual financial information, which have not been audited by us or their auditors.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_07052026204613_Outcome.pdf",
+   "page": 10,
+   "period": "Q4_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 10-Feb-2026 (about Q3_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Press Release Britannia’s Consolidated Sales for the quarter grew 9% while Net profit grew 17% Mumbai, February 10th, 2026: Britannia’s Consolidated Sales for the Quarter ended 31st December 2025 stands at Rs 4,885 Crores, growing 9.5% and Net Profit stands at Rs 682 Crores, growing 17.1% over the same period last year.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_10022026190210_Press_Release_Britannia_Q3_25-26.pdf",
+   "page": 1,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 10-Feb-2026 (about Q3_FY2026, filing date, confirmed by the document)",
+   "excerpt": "14,172 Crores growing 7.7%, while the Net Profit stands at Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_10022026190210_Press_Release_Britannia_Q3_25-26.pdf",
+   "page": 1,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 10-Feb-2026 (about Q3_FY2026, filing date, confirmed by the document)",
+   "excerpt": "Rakshit Hargave, Managing Director & Chief Executive Officer, said: “The consolidated revenue growing by 9.5% during the quarter with profits growing faster at 17% underscores a return to healthy growths, driven by strong momentum across both the biscuits and adjacent categories, alongside a relatively stable commodity environment.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_10022026190210_Press_Release_Britannia_Q3_25-26.pdf",
+   "page": 1,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 10-Feb-2026 (about Q3_FY2026, filing date, confirmed by the document)",
+   "excerpt": "For nine-month period ended 31st December 2025, the Consolidated Sales stands at Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_10022026190210_Press_Release_Britannia_Q3_25-26.pdf",
+   "page": 1,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Results filing",
+   "doc_title": "BRITANNIA Results filing, filed 10-Feb-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "The impact of this change has resulted in reduction in Other operating revenue by about ₹ 65 crores for the quarter ended 31 December 2025.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_10022026184557_Outcome.pdf",
+   "page": 3,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Results filing",
+   "doc_title": "BRITANNIA Results filing, filed 10-Feb-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "The impact of this change has resulted in reduction in Other operating revenue by about ₹ 65 crores for the quarter ended 31 December 2025.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_10022026184557_Outcome.pdf",
+   "page": 8,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Results filing",
+   "doc_title": "BRITANNIA Results filing, filed 10-Feb-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "The impact of this change has resulted in reduction in Other operating revenue by about ₹ 65 crores for the quarter ended 31 December 2025.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_10022026184557_Outcome.pdf",
+   "page": 11,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "BRITANNIA",
+   "topic": "Press release",
+   "doc_title": "BRITANNIA Press release, filed 10-Nov-2025 (about Q2_FY2026, filing date)",
+   "excerpt": "The Board of Directors of the Company at its meeting held on 5th November 2025 identiﬁed and noted following levers of growth for it to become a global total Foods Company in the coming years: a.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_10112025184453_Press_Release.pdf",
+   "page": 2,
+   "period": "Q2_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
   }
  ],
  "industry_info": {
@@ -1668,5 +2145,5 @@
   "HINDUNILVR"
  ],
  "data_quality_flags": [],
- "fetched_at": "2026-10-21 00:00"
+ "fetched_at": "2026-10-21 09:36"
 }

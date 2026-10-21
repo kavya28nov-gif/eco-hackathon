@@ -1,8 +1,8 @@
 {
- "company": "GODREJCP",
+ "company": "Godrej Consumer",
  "ticker": "GODREJCP",
  "sector": "Track C - Consumer, FMCG & Retail",
- "record_count": 144,
+ "record_count": 146,
  "financial_records": [
   {
    "company": "GODREJCP",
@@ -1587,9 +1587,567 @@
    "period_months": 12,
    "doc_title": "GODREJCP Working Capital & Operational Ratios (FY2026)",
    "source_url": "https://www.screener.in/company/GODREJCP/consolidated/"
+  },
+  {
+   "company": "GODREJCP",
+   "metric": "underlying_volume_growth_pct",
+   "value": 9.0,
+   "unit": "percentage",
+   "period": "Q1_FY2027",
+   "period_type": "quarterly",
+   "period_months": 3,
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "quote": "FINANCIAL OVERVIEW Q1 FY 2027 FINANCIAL PERFORMANCE SUMMARY: • Q1 FY 2027 consolidated sales grew by 19% year-on-year on the back of underlying volume growth of 9%, Revenue and profit growth was broad based across all businesses - Standalone business sales grew by 12% on the back of underlying volum",
+   "page": 2,
+   "period_basis": "filing date, confirmed by the document",
+   "doc_kind": "Press release"
+  },
+  {
+   "company": "GODREJCP",
+   "metric": "underlying_sales_growth_pct",
+   "value": 47.0,
+   "unit": "percentage",
+   "period": "Q1_FY2027",
+   "period_type": "quarterly",
+   "period_months": 3,
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "quote": "Strong performance across all metrics: USG ~47% (25% in CC terms); UVG at 17%; EBITDA growth at 42%",
+   "page": 6,
+   "period_basis": "filing date, confirmed by the document",
+   "doc_kind": "Press release"
   }
  ],
- "text_excerpts": [],
+ "text_excerpts": [
+  {
+   "company": "GODREJCP",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "Godrej Consumer Products | Investors",
+   "excerpt": "GCPL investor relations covers Godrej Consumer Products share price, annual reports, financial results, and shareholder information for investors.",
+   "source_url": "https://www.godrejcp.com/investors/reports-and-financials/quarterly-updates"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "PDF GCPL_Investor and Analyst Performance Update_Q4FY2026_v8",
+   "excerpt": "Subject: Investor Presentation We enclose herewith a copy of the Investor Presentation on the Audited Financial Results of the Company for the Quarter and Financial Year ended March 31, 2026. Please take the same on record. Thanking you, Yours faithfully, For Godrej Consumer Products Limited",
+   "source_url": "https://www.godrejcp.com/uploads/GCPL_Investor_Presentation_Final_signed_496817dbae.pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "investor presentation underlying volume growth price quarterly results",
+   "doc_title": "PDF Symbol: GODREJCP",
+   "excerpt": "Quarterly Update: Q4 FY25 This update provides an overall summary of the operating performance and demand trends during the quarter ended March 31, 2025. This is based on internal unaudited management reports. This will be followed by a detailed performance update, post the approval of the Q4 FY25 financial results by the Board of Directors. As outlined in our last Investor Con-call (Jan 2025 ...",
+   "source_url": "https://www.godrejindiasaarc.com/public/uploads/financial_presentation/GCPL_Q4_Signed.pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 06-Oct-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "This expansion addresses current capacity utilization of 75-80%, positioning us to meet rising regional demand and scale.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_06102026160659_SE_signed.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "The USG has been 7% and 6%, and EBITDA has been 6%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "So, yes, most of you all know that actually the first six categories which have kind of called out here makes up to close to 90% of our revenue.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 8,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "I mean, penetration moving up from close to 65% to 80%, and volumes growing at a CAGR of 15% in the last few years is actually really good news because it just means that the need from the consumer for this category is there.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 8,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "So, you will see that correction happen, which broadly kind of translates to close to 1.5% and in some quarters might be 2% in terms of correction of inventory.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 18,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "We're unlikely to kind of take on something which is going to be a 10%, 15% growth.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 18,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "And the reason I ask this is not to just to put you on the spot, but you talk about sort of increased digital spends, but if you look at some of the D2C players, they spend as much as sort of 30% of their revenue on marketing, right?",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 22,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Page 14 of 24 And, yes, you definitely should be seeing a step-up onto our international business performance as a result of both sustained profitable growth on our core legacy portfolio, but a significant step- up onto a portfolio transformation.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 15,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Page 15 of 24 operational areas like demand forecasting or be it core areas like planning media, looking at pricing models.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 16,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "We will correct around close to INR125 crores to INR150 crores of trade inventory with in GT with distributors over the next three quarters.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 18,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "We think we can operate with 10 days of inventory there by virtue of all the tools and the fact patterns which we have.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 20,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "And, again, I think our business is such in FMCG that if you want to kind of grow on a sustained basis is like 5 years, 7 years, 10 years, 15 years -- you want to kind of get your profit growth going, you have to do it on the back of stepping up UVGs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 23,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Earnings call transcript",
+   "doc_title": "GODREJCP Earnings call transcript, filed 07-Sep-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Obviously, you are doing this sharpening of trade inventory in India, but would that mean that the composition of this FY27 target is probably higher than target volumes and profit growth in international and slightly lower than that in India?",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07092026233845_SE_Transcript_02092026.pdf",
+   "page": 24,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 26-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "From establishing its Malanpur facility in 1991 to inaugurating this expanded manufacturing hub today, the company has consistently contributed to employment generation, industrial development and economic growth in the state.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_26082026152323_SE_Intimation_Press_Release_Signed.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 26-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "We expect this expansion to generate a turnover of INR 3,800 crore once fully operational.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_26082026152323_SE_Intimation_Press_Release_Signed.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 11-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "This has resulted in EBITDA margins growing significantly, from ~9% in FY24 to ~15% in FY26.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_11082026155304_Press_Release_F1_-_signed.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Q1 FY 2027 consolidated EBITDA* grew by 14% year-on-year.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Q1 FY 2027 consolidated net profit grew by 11% year-on-year *EBITDA incl.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "At a consolidated level, revenues grew 19% year-on-year, with underlying volume growth of 9%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Net profit grew 11%, reflecting healthy underlying earnings quality, even as margins absorbed some near-term commodity pressure.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "This quarter, consolidated underlying volume growth reached 9%, supported by increasingly broad-based momentum across geographies and categories.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 3,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Q1 FY 2027 sales grew by 12% to ₹2,535 crore; UVG of 7%",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 5,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Q1 FY 2027 EBITDA grew by 10% to ₹548 crore Category Review Home Care Home Care grew by 12%",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 5,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Delivered strong 10% UVG and 15% sales growth led by Shampoo HC and Household Insecticides.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Strong performance across all metrics: USG ~47% (25% in CC terms); UVG at 17%; EBITDA growth at 42%.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Press Release – August 07, 2026 PRESS RELEASE Double-digit revenue and profit growth Mumbai, August 07, 2026: Godrej Consumer Products Limited (GCPL), a leading emerging markets FMCG company, today announced its financial results for the quarter ended June 30, 2026.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 2,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Press release",
+   "doc_title": "GODREJCP Press release, filed 07-Aug-2026 (about Q1_FY2027, filing date, confirmed by the document)",
+   "excerpt": "Press Release – August 07, 2026 With revenue growth tracking ahead of our original expectations and input costs beginning to ease, we enter the remainder of FY27 with increased confidence.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026120835_SE_Press_Release_-_F1_signed.pdf",
+   "page": 4,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date, confirmed by the document",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 07-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Annexure-I Reporting of Consolidated Segment wise Revenue, Results, Assets and Liabilities along with the Quarterly results ( 'f Crore} Quarter ended Year ended 30-Jun-26 31-Mar-26 30-Jun-25 31-Mar-26 Particulars (Unaudited) (Audited) (Unaudited) (Audited) 1.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026115317_Outcome_BM-F1.pdf",
+   "page": 6,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 07-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "6 Ind AS 29 \"Financial Reporting in Hyperinflationary Economies\" has been applied to the Group's entities with a functional currency of Argentina Peso for the period ended June 30, 2026.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026115317_Outcome_BM-F1.pdf",
+   "page": 7,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 07-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Application of these standards resulted in a decrease in revenue from operations by~ 3.44 crore _and decrease in profit by~ 13.50 crore for the period ended June 30, 2026, and increase in net non-monetary assets by~ 33.23 crore with corresponding increase in total Equity as of June 30,2026.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026115317_Outcome_BM-F1.pdf",
+   "page": 7,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 07-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "The Statement includes the interim financial information of one branch Which has not been reviewed, whose interim financial information reflect total revenues (before consolidation adjustments) of Rs: 2.42 crores, total net profit after tax (before consolidation adjustments) of Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026115317_Outcome_BM-F1.pdf",
+   "page": 10,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 07-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "We did not review the interim financial information/ financial results of 10 Subsidiaries included in the Statement, whose interim financial information/ financial results reflect total revenues (before consolidation adjustments) of Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026115317_Outcome_BM-F1.pdf",
+   "page": 12,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 07-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "860.16 crores, total net profit after tax (before consolidation adjustments) of Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026115317_Outcome_BM-F1.pdf",
+   "page": 12,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 07-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "2.42 crores, total net profit after tax (before consolidation adjustments) of Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026115317_Outcome_BM-F1.pdf",
+   "page": 12,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 07-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "The Statement also includes the interim financial information of 3 Subsidiaries which have not been reviewed, whose interim financial information reflect total revenues (before consolidation adjustments) of Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026115317_Outcome_BM-F1.pdf",
+   "page": 12,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 07-Aug-2026 (about Q1_FY2027, filing date)",
+   "excerpt": "Subsidiary Company 17 PT lndomas Susemi Jaya Subsidiary Company 18 PT Godrej Distribution Indonesia Subsidiary Company 19 PT Godrej Consumer Products Indonesia (formerly Subsidiary Company known as PT Megasari Makmur) Page 3 of 5",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_07082026115317_Outcome_BM-F1.pdf",
+   "page": 13,
+   "period": "Q1_FY2027",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 23-Jan-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "Annexure-I Reporting of Consolidated Segment wise Revenue, Results, Assets and Liabilities along with the Quarterly and Nine Months results ( 'lf:Crore) Quarter ended Nine months ended Year ended 31-Dec-25 30-Sep-25 31-Dec-24 31-Dec-25 31-Dec-24 31-Mar-25 Particulars (Unaudited) (Unaudited) (Unaudited) (Unaudited) (Unaudited) (Audited) 1.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_23012026154119_Board_Outcome-Jan_2026-Signed.pdf",
+   "page": 6,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 23-Jan-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "Ind AS 29 \"Financial Reporting in Hyperinflationary Economies\" has been applied to the Group's entities with a functional currency of Argentina Peso for the period ended December 31, 2025.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_23012026154119_Board_Outcome-Jan_2026-Signed.pdf",
+   "page": 7,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 23-Jan-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "Application of these standards resulted in a increase in revenue from operations by, 1.29 crore and decrease in profit by\" 31.51 crore for the period nine months ended December 31, 2025, and increase in net non-monetary assets by, 25.99 crore with corresponding increase in total Equity as of December 31,2025.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_23012026154119_Board_Outcome-Jan_2026-Signed.pdf",
+   "page": 7,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 23-Jan-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "The purchase consideration of, 425.09 crore has been provisionally determined by the Company based on achieving projected sales turnover in the 12 months following the date of acquisition.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_23012026154119_Board_Outcome-Jan_2026-Signed.pdf",
+   "page": 7,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 23-Jan-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "3.62 crores, Company's share of total net profit after tax of Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_23012026154119_Board_Outcome-Jan_2026-Signed.pdf",
+   "page": 10,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 23-Jan-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "We did not review the interim financial information/ financial results of 11 Subsidiaries included in the Statement, whose interim financial information/ financial results reflect Company's share of total revenues of Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_23012026154119_Board_Outcome-Jan_2026-Signed.pdf",
+   "page": 12,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 23-Jan-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "2,286.07 crores, Company's share of total net profit after tax of Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_23012026154119_Board_Outcome-Jan_2026-Signed.pdf",
+   "page": 12,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 23-Jan-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "3.62 crores, Company's share of total net profit after tax of Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_23012026154119_Board_Outcome-Jan_2026-Signed.pdf",
+   "page": 12,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 23-Jan-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "The Statement also includes the interim financial information/ financial results of 3 Subsidiaries which have not been reviewed, whose interim financial information/ financial results reflect Company's share of total revenues of Rs.",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_23012026154119_Board_Outcome-Jan_2026-Signed.pdf",
+   "page": 12,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  },
+  {
+   "company": "GODREJCP",
+   "topic": "Results filing",
+   "doc_title": "GODREJCP Results filing, filed 23-Jan-2026 (about Q3_FY2026, filing date)",
+   "excerpt": "Subsidiary Company 18 PT lndomas Susemi Jaya Subsidiary Company 19 PT Godrej Distribution Indonesia Subsidiary Company ~ Page 3 of 5",
+   "source_url": "https://nsearchives.nseindia.com/corporate/GODREJCP_23012026154119_Board_Outcome-Jan_2026-Signed.pdf",
+   "page": 13,
+   "period": "Q3_FY2026",
+   "period_basis": "filing date",
+   "kind": "filing_pdf"
+  }
+ ],
  "industry_info": {
   "broad_sector": "Fast Moving Consumer Goods",
   "sector": "Fast Moving Consumer Goods",
@@ -1603,6 +2161,10 @@
   "HINDUNILVR",
   "EMAMILTD"
  ],
- "data_quality_flags": [],
- "fetched_at": "2026-10-21 00:00"
+ "data_quality_flags": [
+  "Results filing (06-May-2026) not read: ValueError: PDF larger than 20 MB, skipped.",
+  "Results filing (31-Oct-2025) not read: ValueError: PDF larger than 20 MB, skipped.",
+  "underlying_volume_growth_pct Q1_FY2027: Press release says 9.0%, Earnings call transcript says 4.0% (kept the press release; the other may be a segment figure)."
+ ],
+ "fetched_at": "2026-10-21 09:41"
 }
