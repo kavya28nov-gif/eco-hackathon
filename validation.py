@@ -1156,19 +1156,25 @@ def template_claim(angle: Dict[str, Any], company: str, checks: List[Dict[str, A
         r = a["rows"][-1]
         rv, pv = r["revenue_yoy_pct"], r["profit_yoy_pct"]
         period = r["period"].replace("_", " ")
+        # Superlative ONLY when the code has checked it: is this the widest gap in the
+        # same direction among all quarters shown? (Earlier the template said "the first
+        # time in the window" for every company without checking anything.)
+        same_side = [x["gap_pp"] for x in a["rows"] if x["gap_pp"] * r["gap_pp"] > 0]
+        widest = len(a["rows"]) >= 4 and abs(r["gap_pp"]) == max(abs(g) for g in same_side)
+        record = f", the widest such gap in the {len(a['rows'])} quarters shown" if widest else ""
         # say it the right way round -- earlier this said "sales outran profit"
         # even when profit had grown faster than sales
         if r["gap_pp"] > 0:
             moved = f"fell {abs(pv)}%" if pv < 0 else f"grew only {pv}%"
             claim = (f"In {period}, {company}'s revenue grew {rv}% year on year while net profit {moved}: "
-                     f"a {r['gap_pp']} percentage-point gap{caveat}.")
+                     f"a {r['gap_pp']} percentage-point gap{record}{caveat}.")
             why = ["Sales growth is not reaching the bottom line.",
                    "Possible causes to check next: higher costs, lower other income, higher tax or "
                    "depreciation, or a mix shift."]
         else:
             moved = f"fell {abs(rv)}%" if rv < 0 else f"grew only {rv}%"
             claim = (f"In {period}, {company}'s net profit grew {pv}% year on year while revenue {moved}: "
-                     f"profit outgrew sales by {abs(r['gap_pp'])} percentage points{caveat}.")
+                     f"profit outgrew sales by {abs(r['gap_pp'])} percentage points{record}{caveat}.")
             why = ["Profit is growing faster than sales, so margins are expanding.",
                    "Possible causes to check next: softer input costs, price increases, higher other "
                    "income or lower tax -- some of these do not repeat."]
